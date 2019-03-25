@@ -1,0 +1,12 @@
+提交到远程的github
+
+git  init
+
+git remote add origin "https://github.com/gregchenqun/Linear_Algbra.git"
+
+git add .
+
+git commit -a -m "date"
+
+git push -u origin master
+
