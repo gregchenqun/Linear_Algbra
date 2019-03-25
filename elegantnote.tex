@@ -1,0 +1,485 @@
+\documentclass[blue,normal,cn]{elegantnote}
+% \usepackage{titlesec}
+% \usepackage{titletoc}
+\title{高等代数笔记}
+\author{陈群}
+% Elegant\LaTeX{} Group	\thanks{Elegant\LaTeX{} 其他模板下载地址：\href{https://ddswhu.me/resource/}{https://ddswhu.me/resource/}} }
+\date{\today}
+\usepackage{listings} 
+\lstset{language=[LaTeX]{TeX},basicstyle=\footnotesize\ttfamily}
+
+
+\begin{document}
+
+\tableofcontents
+{\color{ecolor}{\maketitle}}
+
+
+% logo
+% \centerline{\includegraphics[width=0.25\textwidth]{ElegantLaTeX_green.pdf}}
+\section{行列式}
+\subsection{$n$元排列}
+
+\begin{definition}[$n$元排列]
+$1,2,3,...,n$（或者$n$个不同的正整数）的全排列称为一个$n$元排列.
+\end{definition}
+显然,$1,2,3,...,n$（或者$n$个不同的正整数）的$n$元排列有$n!$个.
+
+\begin{definition}[逆序数对和逆序数]
+给定一个数对$(a,b),a ≠b $,若有a>b,则称$(a,b)$为逆序数对.一组数$1,2,3,...,n$中的逆序数对的个数称为该数列的逆序数,记作$τ(1,2,3,...,n)$
+\end{definition}
+对于数列$2431$,其中的逆序数对为$(2,1),(4,3),(4,1),(3,1)$,其逆序数为4.
+
+\begin{definition}[奇排列与偶排列]
+逆序数为奇数的排列称为奇排列；逆序数为偶数的排列称为偶排列.
+\end{definition}
+
+\begin{theorem}
+对换排列中的两个数的位置会改变排列的奇偶性.
+\end{theorem}
+
+\begin{proof}
+1.对换相邻位置的两个数.\\
+设对换之前的排列为$a_1a_2...a_ia_j...a_n$,则对换之后的排列为：$a_1a_2...a_ja_i...a_n$,两个排列进行比计较可以知道,
+对于前$i-1$个位置而言,互换前后的逆序数不变,对于第$j+1$到$n$个位置而言,互换前后的逆序数也没有改变.交换前,第$i,j$位置的逆序数和为：
+\begin{equation*}
+τ(a_i,a_j)+\sum_{k=j+1}^{n}\tau (a_i,a_k)+\sum_{k=j+1}^{n} \tau (a_j,a_k)
+\end{equation*}
+交换后,第$i,j$位置的逆序数和为：
+\begin{equation*}
+τ(a_j,a_i)+\sum_{k=j+1}^{n}\tau (a_j,a_k)+\sum_{k=j+1}^{n} \tau (a_i,a_k)
+\end{equation*}
+
+上述两式的差为$τ(a_j,a_i)-τ(a_i,a_j)=±1$,故两个排列的奇偶性相反.
+\\
+2.一般情况下\\
+设对换之前的排列为$a_1a_2...a_ia_{i+1}...a_{i+s}a_j...a_n$,则对换之后的排列为：$a_1a_2...a_ja_{i+1}...a_{i+s}a_i...a_n$,
+可以看做$s+1+s$次相邻元素之间的对换,每一次都改变了排列的奇偶性,由于$2s+1$为奇数,从而交换前后排列的奇偶性相反.
+\end{proof}
+
+\begin{theorem}
+任一$n$元排列$j_1j_2...j_n$与$123...n$可以经过一系列的对换互变且所做的对换的次数与原排列$j_1j_2...j_n$的奇偶性相同.
+\end{theorem}
+\begin{proof}
+设$j_1j_2...j_n$ 经过s次对换变为$123,...n$,显然$123,...n$是偶排列.由于每互换一次改变排列的奇偶性,所以
+若$j_1j_2...j_n$为奇排列,则$s$为奇数；若$j_1j_2...j_n$为偶排列,则$s$为偶数
+\end{proof}
+
+
+\subsection{$n$阶行列式}
+
+\begin{definition}[$n$阶行列式]
+$n$阶行列式为$n!$项代数和,其中每一项是不同行不同列的$n$个元素的乘积.每一项按照行指标的自然顺序排列,列指标所成的排列是奇排列时带负号,偶排列时带正号.
+\begin{equation*}
+\begin{vmatrix} 
+    a_{11}&a_{12} & a_{13} &...& a_{1n}\\
+    a_{21}&a_{22} & a_{23} &...& a_{2n}\\
+    ...&...&...&...&...\\
+    a_{n1}&a_{n2} & a_{n3} &...& a_{nn}
+\end{vmatrix}
+:=\sum_{j_1j_2...j_n}(-1)^{\tau(j_1j_2...j_n)}a_{1j_1}a_{2j_2}...a_{nj_n}
+\end{equation*}
+记作$|A|$或者$\mathrm {det}\quad A$
+\end{definition}
+
+特别地,可以写作:
+\begin{equation*}
+|A|:=\sum_{i_1i_2...i_n}(-1)^{\tau(i_1 i_2...i_n)}a_{i_1 1}a_{i_2 2}...a_{i_n n}
+\end{equation*}
+
+由上式可以得出结论：
+\begin{property}
+\begin{equation*}
+    |A|:=|A^T|
+\end{equation*}
+\end{property}
+
+\begin{property}
+$A$作行变换,第$i$行乘以$k$,得到$A$
+    \begin{equation*}
+        A\stackrel{\textcircled{i}k}{\longrightarrow}B
+    \end{equation*}
+得到
+    \begin{equation*}
+        |B|=k|A|
+    \end{equation*}
+\end{property}
+
+\begin{proof}
+    \begin{equation*}
+        \begin{vmatrix} 
+            a_{11}&a_{12} & a_{13} &...& a_{1n}\\
+            ...&...&...&...&...\\
+            a_{i1}&a_{i2} & a_{i3} &...& a_{in}\\
+            ...&...&...&...&...\\
+            a_{n1}&a_{n2} & a_{n3} &...& a_{nn}
+        \end{vmatrix}
+        \longrightarrow
+        \begin{vmatrix} 
+            a_{11}&a_{12} & a_{13} &...& a_{1n}\\
+            ...&...&...&...&...\\
+            ka_{i1}& ka_{i2} & ka_{i3} &...& ka_{in}\\
+            ...&...&...&...&...\\
+            a_{n1}&a_{n2} & a_{n3} &...& a_{nn}
+        \end{vmatrix}
+    \end{equation*}
+$B$的行列式可以表示为：
+\begin{equation*}
+    \begin{aligned}
+        |B|&=\sum_{j_1j_2...j_n}(-1)^{\tau(j_1 j_2...j_n)}a_{1 j_1}a_{2 j_2}...ka_{i,j_i}...a_{n j_n}\\
+           &=k\sum_{j_1j_2...j_n}(-1)^{\tau(j_1 j_2...j_n)}a_{1 j_1}a_{2 j_2}...a_{i,j_i}...a_{n j_n}\\
+           &=k|A|
+    \end{aligned}
+\end{equation*}
+\end{proof}
+
+\begin{property}
+    \begin{equation*}
+        \begin{vmatrix} 
+            a_{11}&a_{12} & a_{13} &...& a_{1n}\\
+            ...&...&...&...&...\\
+            b_1+c_1&b_2+c_2 & b_3+c_3 &...& b_n+c_n\\
+            ...&...&...&...&...\\
+            a_{n1}&a_{n2} & a_{n3} &...& a_{nn}
+        \end{vmatrix}
+       =
+       \begin{vmatrix} 
+        a_{11}&a_{12} & a_{13} &...& a_{1n}\\
+        ...&...&...&...&...\\
+        b_1&b_2 & b_3 &...& b_n\\
+        ...&...&...&...&...\\
+        a_{n1}&a_{n2} & a_{n3} &...& a_{nn}\
+        \end{vmatrix}
+        +
+        \begin{vmatrix} 
+            a_{11}&a_{12} & a_{13} &...& a_{1n}\\
+            ...&...&...&...&...\\
+            c_1&c_2 & c_3 &...& c_n\\
+            ...&...&...&...&...\\
+            a_{n1}&a_{n2} & a_{n3} &...& a_{nn}
+        \end{vmatrix}
+    \end{equation*}
+    \end{property}
+\begin{proof}
+
+    设左式为$|A|$,则有
+    \begin{equation*}
+        \begin{aligned}
+            |A|&=\sum_{j_1j_2...j_n}(-1)^{\tau(j_1 j_2...j_n)}a_{1 j_1}a_{2 j_2}...(b_{j_i}+c_{j_i})...a_{n j_n}\\
+               &=\sum_{j_1j_2...j_n}(-1)^{\tau(j_1 j_2...j_n)}a_{1 j_1}a_{2 j_2}...b_{j_i}...a_{n j_n}+
+                 \sum_{j_1j_2...j_n}(-1)^{\tau(j_1 j_2...j_n)}a_{1 j_1}a_{2 j_2}...c_{j_i}...a_{n j_n}\\
+               &=
+               \begin{vmatrix} 
+                a_{11}&a_{12} & a_{13} &...& a_{1n}\\
+                ...&...&...&...&...\\
+                b_1&b_2 & b_3 &...& b_n\\
+                ...&...&...&...&...\\
+                a_{n1}&a_{n2} & a_{n3} &...& a_{nn}\
+                \end{vmatrix}
+                +
+                \begin{vmatrix} 
+                    a_{11}&a_{12} & a_{13} &...& a_{1n}\\
+                    ...&...&...&...&...\\
+                    c_1&c_2 & c_3 &...& c_n\\
+                    ...&...&...&...&...\\
+                    a_{n1}&a_{n2} & a_{n3} &...& a_{nn}
+                \end{vmatrix}
+        \end{aligned}
+    \end{equation*}
+\end{proof}
+
+\begin{property}
+    \begin{equation*}
+        A\stackrel{(i,k)}{\longrightarrow}C \Rightarrow |C|=-|A|
+    \end{equation*}
+\end{property}
+
+
+\begin{proof}
+    设：
+    \begin{equation*}
+        |C|=   \begin{vmatrix} 
+            a_{11}&a_{12} & a_{13} &...& a_{1n}\\
+            ...&...&...&...&...\\
+            a_{k1}&a_{k2} & a_{k3} &...& a_{kn}\\
+            ...&...&...&...&...\\
+            a_{i1}&a_{i2} & a_{i3} &...& a_{in}\\
+            ...&...&...&...&...\\
+            a_{n1}&a_{n2} & a_{n3} &...& a_{nn}
+            \end{vmatrix}
+            ,
+        |A|=\begin{vmatrix} 
+            a_{11}&a_{12} & a_{13} &...& a_{1n}\\
+            ...&...&...&...&...\\
+            a_{i1}&a_{i2} & a_{i3} &...& a_{in}\\
+            ...&...&...&...&...\\
+            a_{k1}&a_{k2} & a_{k3} &...& a_{kn}\\
+            ...&...&...&...&...\\
+            a_{n1}&a_{n2} & a_{n3} &...& a_{nn}
+            \end{vmatrix}
+    \end{equation*}
+则有
+    \begin{equation*}
+        \begin{aligned}
+            |C|&=  \sum_{j_1j_2...j_i...j_k...j_n}(-1)^{\tau(j_1 j_2...j_i...j_k...j_n)}a_{1 j_1}a_{2 j_2}...a_{k j_i}...a_{i j_k}...a_{n j_n}\\
+               &= \sum_{j_1j_2...j_k...j_i...j_n}(-1)^{\tau(j_1 j_2...j_k...j_i...j_n)}a_{1 j_1}a_{2 j_2}...a_{i j_k}...a_{k j_i}...a_{n j_n}\\
+                &=(-1)|A|=-|A|\\
+            \end{aligned}
+    \end{equation*}
+\end{proof}
+
+
+\begin{property}
+    两行或者两列相等的行列式的值为0.
+\end{property}
+
+\begin{proof}
+设$A$的两行相等,则互换相等的两行,行列式$|A|$不变,由上一性质,即$|A|=-|A|$,则$|A|=0$.
+\end{proof}
+
+\begin{property}
+    行列式两行或者两列成比例,则该行列式为0.
+\end{property}
+
+\begin{proof}
+    \begin{equation*}
+        \begin{vmatrix} 
+            a_{11}&a_{12} & a_{13} &...& a_{1n}\\
+            ...&...&...&...&...\\
+            a_{i1}&a_{i2} & a_{i3} &...& a_{in}\\
+            ...&...&...&...&...\\
+            la_{i1}&la_{i2} & la_{i3} &...& la_{in}\\
+            ...&...&...&...&...\\
+            a_{n1}&a_{n2} & a_{n3} &...& a_{nn}
+            \end{vmatrix}
+        =l0=0
+        \end{equation*}
+\end{proof}
+
+\begin{property}
+   \begin{equation*}
+    A\stackrel{\textcircled{k}+\textcircled{i}l}{\longrightarrow}D \Rightarrow |A|=|D|
+    \end{equation*}
+\end{property}
+
+
+\begin{proof}
+    设
+    \begin{equation*}
+        |D|=
+        \begin{vmatrix} 
+            a_{11}&a_{12} & a_{13} &...& a_{1n}\\
+            ...&...&...&...&...\\
+            a_{i1}&a_{i2} & a_{i3} &...& a_{in}\\
+            ...&...&...&...&...\\
+            a_{k1}+la_{i1} & a_{k2}+la_{i2} & a_{k3}+la_{i3} &...& a_{kn}+la_{in}\\
+            ...&...&...&...&...\\
+            a_{n1}&a_{n2} & a_{n3} &...& a_{nn}
+            \end{vmatrix}
+        ,|A|=
+            \begin{vmatrix} 
+                a_{11}&a_{12} & a_{13} &...& a_{1n}\\
+                ...&...&...&...&...\\
+                a_{i1}&a_{i2} & a_{i3} &...& a_{in}\\
+                ...&...&...&...&...\\
+                a_{k1}&a_{k2} & a_{k3} &...& a_{kn}\\
+                ...&...&...&...&...\\
+                a_{n1}&a_{n2} & a_{n3} &...& a_{nn}
+                \end{vmatrix}
+        \end{equation*}
+则有
+    \begin{equation*}
+        \begin{aligned}
+        |D|&=
+            \begin{vmatrix} 
+                a_{11}&a_{12} & a_{13} &...& a_{1n}\\
+                ...&...&...&...&...\\
+                a_{i1}&a_{i2} & a_{i3} &...& a_{in}\\
+                ...&...&...&...&...\\
+                a_{k1} & a_{k2} & a_{k3} &...& a_{kn}\\
+                ...&...&...&...&...\\
+                a_{n1}&a_{n2} & a_{n3} &...& a_{nn}
+            \end{vmatrix}
+        +l
+            \begin{vmatrix} 
+                a_{11}&a_{12} & a_{13} &...& a_{1n}\\
+                ...&...&...&...&...\\
+                a_{i1}&a_{i2} & a_{i3} &...& a_{in}\\
+                ...&...&...&...&...\\
+                a_{i1}&a_{i2} & a_{i3} &...& a_{in}\\
+                ...&...&...&...&...\\
+                a_{n1}&a_{n2} & a_{n3} &...& a_{nn}
+                \end{vmatrix}
+                \\
+        &=|A|+l0=|A|
+        \end{aligned}
+        \end{equation*}
+
+
+\end{proof}
+
+\section{线性空间}
+\subsection{线性空间的定义}
+
+\begin{definition}
+    $$S\times M:=\{(a,b)|A\in S,b \in M\}$$
+称为$S$与$M$的笛卡尔积
+\end{definition}
+
+\begin{definition}
+   非空集合$S$上的一个代数运算定义为$S\times S$到 $S$的一个映射.
+\end{definition}
+
+\begin{definition}
+设$V$是一个非空集合,$K$是一个数域.若$V$上有一个运算,称为加法,即$(\alpha,\beta) \mapsto \alpha + \beta$;$K$与$V$之间有
+运算,称为数量乘法,即$k\times V \rightarrow V:(k,\alpha) \mapsto k\alpha$,并且满足如下运算法则：
+    \begin{enumerate}[(1)]
+        \item $\alpha+\beta=\beta+\alpha,\quad \forall \alpha , \beta \in V $
+        \item $\alpha+\beta+\gamma=\alpha+(\beta+\gamma),\quad \forall \alpha,\beta \in V $
+        \item $V$中有元素$0$,使得：$\alpha + 0=\alpha,\quad \forall \alpha \in V$
+        \item $\forall \alpha \in V$,有$\beta \in V$,满足$\alpha+\beta=0$.称$\beta$为$\alpha$的负元
+        \item $1\alpha=\alpha,\quad \forall \alpha \in V$
+        \item $(kl)\alpha=k(l\alpha),\quad \forall k,l \in K,\alpha \in V$
+        \item $(k+l)\alpha=k\alpha+l\alpha,\quad \forall k,l \in K,\alpha \in V$
+        \item $k(\alpha+\beta)=k\alpha+k\beta,\quad \forall k,l \in K,\alpha \in V$
+    \end{enumerate}
+    那么称$V$为数域$K$上的一个线性空间.$V$中元素可以称为向量,$V$可以称作向量空间.
+\end{definition}
+\begin{example}
+    $\mathbb{R}^X:=$\{非空集合$X$到$R$的映射\},称为$X$上的实值函数.规定：
+    \begin{equation*}
+        \begin{aligned}
+        &(f+g)(x):=f(x)+g(x),&\forall x \in X\\
+        &(kf)(x):=kf(x), &\forall x \in X,k\in \mathbb{R}\\
+        \end{aligned}
+    \end{equation*}\
+    零函数为：
+    \begin{equation*}
+        0(x):=0,\forall x \in X
+    \end{equation*}
+    易证$\mathbb{R}^X$是$\mathbb{R}$上的一个线性空间.
+\end{example}
+
+设$V$是数域$K$上的线性空间,其具有以下性质：
+
+\begin{property}
+    $V$中的零元是唯一的.
+\end{property}
+
+\begin{proof}
+    假设零元不唯一,设$0_1,0_2$都是$V$的零元,且有$0_1 \neq 0_2 $.由$0_2$是零元,所以$0_1+0_2=0_1$；
+    由$0_1$是零元,所以$0_2+0_1=0_2$,所以$0_1=0_2$,与假设矛盾,故假设不成立.
+\end{proof}
+
+\begin{property}
+    对于任意的$\alpha \in V$,$\alpha$的负元是唯一的,记作$-\alpha$.
+\end{property}
+
+\begin{proof}
+    假设负元不唯一,设$\beta_1,\beta_2$都是$\alpha$的负元,且有$\beta_1 \neq \beta_2 $.则有
+    \begin{equation*}
+        \begin{aligned}
+            \beta_1+\alpha+\beta_2=\beta_1+(\alpha+\beta_2)=\beta_1+0=\beta_1\\
+            \beta_1+\alpha+\beta_2= (\beta_1+\alpha)+\beta_2=0+\beta_2=\beta_2\\
+        \end{aligned}
+    \end{equation*}
+    所以$\beta_1=\beta_2$,与假设矛盾,故而假设不成立.
+\end{proof}
+
+
+\begin{property}
+    $0\alpha=0,\quad \forall \alpha \in V$
+\end{property}
+
+\begin{proof}
+    \begin{equation*}
+        \begin{aligned}
+        &0\alpha=(0+0)\alpha=0\alpha+0\alpha\\
+        &0\alpha+(-0\alpha)=0\alpha+0\alpha+(-\alpha)\\
+        &0=0\alpha
+        \end{aligned}
+    \end{equation*}
+\end{proof}
+
+
+\begin{property}
+    $k0=0,\quad \forall k \in K$
+\end{property}
+
+\begin{proof}
+    \begin{equation*}
+        \begin{aligned}
+        &k0=k(0+0)=k0+k0\\
+        &k0+(-k0)=k0+k0+(-k0)\\
+        &0=k0
+        \end{aligned}
+    \end{equation*}
+\end{proof}
+
+\begin{property}
+   若$k\alpha=0$,则有$k=0$或$\alpha=0$
+\end{property}
+
+\begin{proof}
+    假设$k\neq 0$
+    \begin{equation*}
+        \alpha=1\alpha=(k^{-1}k)\alpha=k^{-1}(k\alpha)
+    \end{equation*}
+    由$k\alpha=0$,则有$\alpha=0$
+\end{proof}
+
+
+\begin{property}
+    $(-1)\alpha=-\alpha,\quad \forall \alpha \in V$
+ \end{property}
+ 
+ \begin{proof}
+     \begin{equation*}
+         \alpha+(-1)\alpha=1\alpha+(-1)\alpha=(1-1)\alpha=0
+     \end{equation*}
+     所以$(-1)\alpha$是$\alpha$的负元,为$-\alpha$.
+ \end{proof}
+
+\subsection{线性子空间}
+\begin{definition}
+$V$是数域$K$上的线性空间,其中的元素为$\alpha$,$U$是$V$的的一个非空子集.若$U$对于$V$的加法和数量乘法（以$V$中
+的加法和数量乘法对$U$中的元素作运算）也是$K$上的线性空间,
+则称$U$是$V$的子空间.
+\end{definition}
+
+\begin{theorem}
+$V$的非空子集$U$是子空间 \\
+$\Longleftrightarrow$
+    \begin{enumerate}
+        \item 若$\alpha,\beta \in U$,则$\alpha+\beta \in U$.($U$对于$V$的加法封闭)
+        \item 若$\alpha \in U$,则$k\alpha \in U$.($U$对于$V$的数量乘法封闭)
+    \end{enumerate}
+\end{theorem}
+
+\begin{proof}
+$"\Rightarrow"$:有定义可以得到；\\
+$"\Leftarrow"$:$V$的加法和数量乘法限定到$U$上为$U$的加法和数量乘法,显然8条运算法则中,1,2,5,6,7,8是成立的.对于第3和第4条
+\\3.由$U\neq \varnothing,\exists \beta \in U$,使得,$0\beta=0 \in U$,从而$0 \in U$,零元存在.\\
+4.对于任意的$\alpha \in U$,有$(-1)\alpha \in U$,即$-\alpha \in U$,从而负元存在.
+\end{proof}
+
+\begin{example}
+$\{0\}$空间是子空间
+\end{example}
+\begin{definition}
+若存在一组向量$\alpha_1,\alpha_2,...,\alpha_s \in W$,则将
+$k_1 \alpha_1+k_2 \alpha_2+...+k_s \alpha_s$称为$\alpha_1,\alpha_2,...,\alpha_s$的线性组合.其中$k_1,k_2,...,k_s \in K$
+.令$W=\{k_1 \alpha_1+k_2 \alpha_2+...+k_s \alpha_s|k_1,k_2,...,k_s \in k\}$,则有$0 \in W$且$W$对于$V$的加法和数量乘法
+封闭,从而$W$是$V$的子空间,将其称作由向量组$\alpha_1,\alpha_2,...,\alpha_s$生成的子空间,记作$<\alpha_1,\alpha_2,...,\alpha_s>$
+\end{definition}
+
+\begin{definition}
+   $\beta \in <\alpha_1,\alpha_2,...,\alpha_s> \quad \Longleftrightarrow  \quad$
+    存在$l_1,l_2,...,l_s \in K$
+    使得$\beta=l_1 \alpha_1+l_2 \alpha_2+...+l_s \alpha_s$.此时称,$\beta$可以由$\alpha_1,\alpha_2,...,\alpha_s$线性表出.
+\end{definition}
+
+ 
+
+
+\end{document}
