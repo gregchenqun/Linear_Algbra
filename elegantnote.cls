@@ -50,9 +50,9 @@
 	\setmonofont{Microsoft YaHei}
 	\RequirePackage{xeCJK}
 	\RequirePackage{fontspec, xunicode, xltxtra}
-	\setCJKmainfont[BoldFont={黑体},ItalicFont={楷体}]{宋体}
-	\setCJKsansfont[BoldFont={黑体},ItalicFont={楷体}]{楷体}
-	\setCJKmonofont[BoldFont={黑体},ItalicFont={楷体}]{微软雅黑}
+	\setCJKmainfont[BoldFont={黑体},ItalicFont={黑体}]{宋体}
+	\setCJKsansfont[BoldFont={黑体},ItalicFont={黑体}]{楷体}
+	\setCJKmonofont[BoldFont={黑体},ItalicFont={黑体}]{微软雅黑}
 	\XeTeXlinebreaklocale "zh"
 	\XeTeXlinebreakskip = 0pt plus 1pt minus 0.1pt
 \else

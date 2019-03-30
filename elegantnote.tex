@@ -322,7 +322,7 @@ $B$的行列式可以表示为：
 \subsection{线性空间的定义}
 
 \begin{definition}
-    $$S\times M:=\{(a,b)|A\in S,b \in M\}$$
+    $$S\times M:=\{(a,b)|A∈ S,b ∈ M\}$$
 称为$S$与$M$的笛卡尔积
 \end{definition}
 
@@ -331,17 +331,17 @@ $B$的行列式可以表示为：
 \end{definition}
 
 \begin{definition}
-设$V$是一个非空集合,$K$是一个数域.若$V$上有一个运算,称为加法,即$(\alpha,\beta) \mapsto \alpha + \beta$;$K$与$V$之间有
-运算,称为数量乘法,即$k\times V \rightarrow V:(k,\alpha) \mapsto k\alpha$,并且满足如下运算法则：
+设$V$是一个非空集合,$K$是一个数域.若$V$上有一个运算,称为加法,即$(α,β) \mapsto α + β$;$K$与$V$之间有
+运算,称为数量乘法,即$k\times V \rightarrow V:(k,α) \mapsto kα$,并且满足如下运算法则：
     \begin{enumerate}[(1)]
-        \item $\alpha+\beta=\beta+\alpha,\quad \forall \alpha , \beta \in V $
-        \item $\alpha+\beta+\gamma=\alpha+(\beta+\gamma),\quad \forall \alpha,\beta \in V $
-        \item $V$中有元素$0$,使得：$\alpha + 0=\alpha,\quad \forall \alpha \in V$
-        \item $\forall \alpha \in V$,有$\beta \in V$,满足$\alpha+\beta=0$.称$\beta$为$\alpha$的负元
-        \item $1\alpha=\alpha,\quad \forall \alpha \in V$
-        \item $(kl)\alpha=k(l\alpha),\quad \forall k,l \in K,\alpha \in V$
-        \item $(k+l)\alpha=k\alpha+l\alpha,\quad \forall k,l \in K,\alpha \in V$
-        \item $k(\alpha+\beta)=k\alpha+k\beta,\quad \forall k,l \in K,\alpha \in V$
+        \item $α+β=β+α,\quad \forall α , β ∈ V $
+        \item $α+β+γ=α+(β+γ),\quad \forall α,β ∈ V $
+        \item $V$中有元素$0$,使得：$α + 0=α,\quad \forall α ∈ V$
+        \item $\forall α ∈ V$,有$β ∈ V$,满足$α+β=0$.称$β$为$α$的负元
+        \item $1α=α,\quad \forall α ∈ V$
+        \item $(kl)α=k(lα),\quad \forall k,l ∈ K,α ∈ V$
+        \item $(k+l)α=kα+lα,\quad \forall k,l ∈ K,α ∈ V$
+        \item $k(α+β)=kα+kβ,\quad \forall k,l ∈ K,α ∈ V$
     \end{enumerate}
     那么称$V$为数域$K$上的一个线性空间.$V$中元素可以称为向量,$V$可以称作向量空间.
 \end{definition}
@@ -349,13 +349,13 @@ $B$的行列式可以表示为：
     $\mathbb{R}^X:=$\{非空集合$X$到$R$的映射\},称为$X$上的实值函数.规定：
     \begin{equation*}
         \begin{aligned}
-        &(f+g)(x):=f(x)+g(x),&\forall x \in X\\
-        &(kf)(x):=kf(x), &\forall x \in X,k\in \mathbb{R}\\
+        &(f+g)(x):=f(x)+g(x),&\forall x ∈ X\\
+        &(kf)(x):=kf(x), &\forall x ∈ X,k∈ \mathbb{R}\\
         \end{aligned}
     \end{equation*}\
     零函数为：
     \begin{equation*}
-        0(x):=0,\forall x \in X
+        0(x):=0,\forall x ∈ X
     \end{equation*}
     易证$\mathbb{R}^X$是$\mathbb{R}$上的一个线性空间.
 \end{example}
@@ -372,38 +372,38 @@ $B$的行列式可以表示为：
 \end{proof}
 
 \begin{property}
-    对于任意的$\alpha \in V$,$\alpha$的负元是唯一的,记作$-\alpha$.
+    对于任意的$α ∈ V$,$α$的负元是唯一的,记作$-α$.
 \end{property}
 
 \begin{proof}
-    假设负元不唯一,设$\beta_1,\beta_2$都是$\alpha$的负元,且有$\beta_1 \neq \beta_2 $.则有
+    假设负元不唯一,设$β_1,β_2$都是$α$的负元,且有$β_1 \neq β_2 $.则有
     \begin{equation*}
         \begin{aligned}
-            \beta_1+\alpha+\beta_2=\beta_1+(\alpha+\beta_2)=\beta_1+0=\beta_1\\
-            \beta_1+\alpha+\beta_2= (\beta_1+\alpha)+\beta_2=0+\beta_2=\beta_2\\
+            β_1+α+β_2=β_1+(α+β_2)=β_1+0=β_1\\
+            β_1+α+β_2= (β_1+α)+β_2=0+β_2=β_2\\
         \end{aligned}
     \end{equation*}
-    所以$\beta_1=\beta_2$,与假设矛盾,故而假设不成立.
+    所以$β_1=β_2$,与假设矛盾,故而假设不成立.
 \end{proof}
 
 
 \begin{property}
-    $0\alpha=0,\quad \forall \alpha \in V$
+    $0α=0,\quad \forall α ∈ V$
 \end{property}
 
 \begin{proof}
     \begin{equation*}
         \begin{aligned}
-        &0\alpha=(0+0)\alpha=0\alpha+0\alpha\\
-        &0\alpha+(-0\alpha)=0\alpha+0\alpha+(-\alpha)\\
-        &0=0\alpha
+        &0α=(0+0)α=0α+0α\\
+        &0α+(-0α)=0α+0α+(-α)\\
+        &0=0α
         \end{aligned}
     \end{equation*}
 \end{proof}
 
 
 \begin{property}
-    $k0=0,\quad \forall k \in K$
+    $k0=0,\quad \forall k ∈ K$
 \end{property}
 
 \begin{proof}
@@ -417,32 +417,32 @@ $B$的行列式可以表示为：
 \end{proof}
 
 \begin{property}
-   若$k\alpha=0$,则有$k=0$或$\alpha=0$
+   若$kα=0$,则有$k=0$或$α=0$
 \end{property}
 
 \begin{proof}
     假设$k\neq 0$
     \begin{equation*}
-        \alpha=1\alpha=(k^{-1}k)\alpha=k^{-1}(k\alpha)
+        α=1α=(k^{-1}k)α=k^{-1}(kα)
     \end{equation*}
-    由$k\alpha=0$,则有$\alpha=0$
+    由$kα=0$,则有$α=0$
 \end{proof}
 
 
 \begin{property}
-    $(-1)\alpha=-\alpha,\quad \forall \alpha \in V$
+    $(-1)α=-α,\quad \forall α ∈ V$
  \end{property}
  
  \begin{proof}
      \begin{equation*}
-         \alpha+(-1)\alpha=1\alpha+(-1)\alpha=(1-1)\alpha=0
+         α+(-1)α=1α+(-1)α=(1-1)α=0
      \end{equation*}
-     所以$(-1)\alpha$是$\alpha$的负元,为$-\alpha$.
+     所以$(-1)α$是$α$的负元,为$-α$.
  \end{proof}
 
 \subsection{线性子空间}
 \begin{definition}
-$V$是数域$K$上的线性空间,其中的元素为$\alpha$,$U$是$V$的的一个非空子集.若$U$对于$V$的加法和数量乘法（以$V$中
+$V$是数域$K$上的线性空间,其中的元素为$α$,$U$是$V$的的一个非空子集.若$U$对于$V$的加法和数量乘法（以$V$中
 的加法和数量乘法对$U$中的元素作运算）也是$K$上的线性空间,
 则称$U$是$V$的子空间.
 \end{definition}
@@ -451,34 +451,60 @@ $V$是数域$K$上的线性空间,其中的元素为$\alpha$,$U$是$V$的的一�
 $V$的非空子集$U$是子空间 \\
 $\Longleftrightarrow$
     \begin{enumerate}
-        \item 若$\alpha,\beta \in U$,则$\alpha+\beta \in U$.($U$对于$V$的加法封闭)
-        \item 若$\alpha \in U$,则$k\alpha \in U$.($U$对于$V$的数量乘法封闭)
+        \item 若$α,β ∈ U$,则$α+β ∈ U$.($U$对于$V$的加法封闭)
+        \item 若$α ∈ U$,则$kα ∈ U$.($U$对于$V$的数量乘法封闭)
     \end{enumerate}
 \end{theorem}
 
 \begin{proof}
 $"\Rightarrow"$:有定义可以得到；\\
 $"\Leftarrow"$:$V$的加法和数量乘法限定到$U$上为$U$的加法和数量乘法,显然8条运算法则中,1,2,5,6,7,8是成立的.对于第3和第4条
-\\3.由$U\neq \varnothing,\exists \beta \in U$,使得,$0\beta=0 \in U$,从而$0 \in U$,零元存在.\\
-4.对于任意的$\alpha \in U$,有$(-1)\alpha \in U$,即$-\alpha \in U$,从而负元存在.
+\\3.由$U\neq \varnothing,\exists β ∈ U$,使得,$0β=0 ∈ U$,从而$0 ∈ U$,零元存在.\\
+4.对于任意的$α ∈ U$,有$(-1)α ∈ U$,即$-α ∈ U$,从而负元存在.
 \end{proof}
 
 \begin{example}
 $\{0\}$空间是子空间
 \end{example}
+
 \begin{definition}
-若存在一组向量$\alpha_1,\alpha_2,...,\alpha_s \in W$,则将
-$k_1 \alpha_1+k_2 \alpha_2+...+k_s \alpha_s$称为$\alpha_1,\alpha_2,...,\alpha_s$的线性组合.其中$k_1,k_2,...,k_s \in K$
-.令$W=\{k_1 \alpha_1+k_2 \alpha_2+...+k_s \alpha_s|k_1,k_2,...,k_s \in k\}$,则有$0 \in W$且$W$对于$V$的加法和数量乘法
-封闭,从而$W$是$V$的子空间,将其称作由向量组$\alpha_1,\alpha_2,...,\alpha_s$生成的子空间,记作$<\alpha_1,\alpha_2,...,\alpha_s>$
+若存在一组向量$α_1,α_2,...,α_s ∈ W$,则将
+$k_1 α_1+k_2 α_2+...+k_s α_s$称为$α_1,α_2,...,α_s$的线性组合.其中$k_1,k_2,...,k_s ∈ K$
+.令$W=\{k_1 α_1+k_2 α_2+...+k_s α_s|k_1,k_2,...,k_s ∈ k\}$,则有$0 ∈ W$且$W$对于$V$的加法和数量乘法
+封闭,从而$W$是$V$的子空间,将其称作由向量组$α_1,α_2,...,α_s$生成的子空间,记作$<α_1,α_2,...,α_s>$.
 \end{definition}
 
 \begin{definition}
-   $\beta \in <\alpha_1,\alpha_2,...,\alpha_s> \quad \Longleftrightarrow  \quad$
-    存在$l_1,l_2,...,l_s \in K$
-    使得$\beta=l_1 \alpha_1+l_2 \alpha_2+...+l_s \alpha_s$.此时称,$\beta$可以由$\alpha_1,\alpha_2,...,\alpha_s$线性表出.
+   $β ∈ <α_1,α_2,...,α_s>
+   \\ :\Longleftrightarrow  \quad$
+    存在$l_1,l_2,...,l_s ∈ K$
+    使得$β=l_1 α_1+l_2 α_2+...+l_s α_s$.
+    \\此时称,$β$可以由$α_1,α_2,...,α_s$线性表出.
 \end{definition}
 
+对于方程组：\\
+$x_1α_1+x_2α_2+...+x_nα_n=\beta$ $
+\\\Longleftrightarrow$
+$K$中有一组$c_1,c_2,...,c_n$,使得$c_1α_1+c_2α_2+...+c_nα_n=\beta$
+$\\\Longleftrightarrow$
+$\beta$可以由$α_1,α_2,...,α_n$线性表出。
+$\\\Longleftrightarrow$
+$\beta \in <α_1,α_2,...,α_n>$（生成的子空间）。
 
-因此
+\subsection{线性相关与线性无关}
+\begin{definition}
+    设$V$是数域$K$上的一个线性空间，对于$V$中的一个向量组：$α_1,α_2,...,α_s,(s≥1)$，若$K$中有不全为$0$的一组数，使得：
+    \begin{equation*}
+        k_1α_1+k_2 α_2+...+k_s α_s=0
+    \end{equation*}
+    则称$α_1,α_2,...,α_s$线性相关，否则，称$α_1,α_2,...,α_s$线性无关。即:
+    \begin{equation*}
+        k_1 α_1+k_2 α_2+...+k_s α_s=0 \quad \Longrightarrow \quad k_1=k_2=...=k_s=0
+    \end{equation*}
+    则$α_1,α_2,...,α_s$线性无关。
+\end{definition}
+
+对于现行方程组
+
+
 \end{document}
