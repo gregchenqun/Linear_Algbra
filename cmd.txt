@@ -6,6 +6,12 @@ git remote add origin "https://github.com/gregchenqun/Linear_Algbra.git"
 
 git add .
 
+git config --global user.email "chenqun1990612@163.com"
+
+
+git config --global user.email "chenqun1990612@163.com"
+
+
 git commit -a -m "date"
 
 git push -u origin master
