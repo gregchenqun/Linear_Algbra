@@ -367,7 +367,7 @@ $B$的行列式可以表示为：
 \end{property}
 
 \begin{proof}
-    假设零元不唯一,设$0_1,0_2$都是$V$的零元,且有$0_1 \neq 0_2 $.由$0_2$是零元,所以$0_1+0_2=0_1$；
+    假设零元不唯一,设$0_1,0_2$都是$V$的零元,且有$0_1 ≠ 0_2 $.由$0_2$是零元,所以$0_1+0_2=0_1$；
     由$0_1$是零元,所以$0_2+0_1=0_2$,所以$0_1=0_2$,与假设矛盾,故假设不成立.
 \end{proof}
 
@@ -376,7 +376,7 @@ $B$的行列式可以表示为：
 \end{property}
 
 \begin{proof}
-    假设负元不唯一,设$β_1,β_2$都是$α$的负元,且有$β_1 \neq β_2 $.则有
+    假设负元不唯一,设$β_1,β_2$都是$α$的负元,且有$β_1 ≠ β_2 $.则有
     \begin{equation*}
         \begin{aligned}
             β_1+α+β_2=β_1+(α+β_2)=β_1+0=β_1\\
@@ -421,7 +421,7 @@ $B$的行列式可以表示为：
 \end{property}
 
 \begin{proof}
-    假设$k\neq 0$
+    假设$k≠ 0$
     \begin{equation*}
         α=1α=(k^{-1}k)α=k^{-1}(kα)
     \end{equation*}
@@ -459,7 +459,7 @@ $\Longleftrightarrow$
 \begin{proof}
 $"\Rightarrow"$:有定义可以得到；\\
 $"\Leftarrow"$:$V$的加法和数量乘法限定到$U$上为$U$的加法和数量乘法,显然8条运算法则中,1,2,5,6,7,8是成立的.对于第3和第4条
-\\3.由$U\neq \varnothing,\exists β ∈ U$,使得,$0β=0 ∈ U$,从而$0 ∈ U$,零元存在.\\
+\\3.由$U≠ \varnothing,\exists β ∈ U$,使得,$0β=0 ∈ U$,从而$0 ∈ U$,零元存在.\\
 4.对于任意的$α ∈ U$,有$(-1)α ∈ U$,即$-α ∈ U$,从而负元存在.
 \end{proof}
 
@@ -483,13 +483,13 @@ $k_1 α_1+k_2 α_2+...+k_s α_s$称为$α_1,α_2,...,α_s$的线性组合.其中
 \end{definition}
 
 对于方程组：\\
-$x_1α_1+x_2α_2+...+x_nα_n=\beta$ $
+$x_1α_1+x_2α_2+...+x_nα_n=β$ $
 \\\Longleftrightarrow$
-$K$中有一组$c_1,c_2,...,c_n$,使得$c_1α_1+c_2α_2+...+c_nα_n=\beta$
+$K$中有一组$c_1,c_2,...,c_n$,使得$c_1α_1+c_2α_2+...+c_nα_n=β$
 $\\\Longleftrightarrow$
-$\beta$可以由$α_1,α_2,...,α_n$线性表出。
+$β$可以由$α_1,α_2,...,α_n$线性表出。
 $\\\Longleftrightarrow$
-$\beta \in <α_1,α_2,...,α_n>$（生成的子空间）。
+$β \in <α_1,α_2,...,α_n>$（生成的子空间）。
 
 \subsection{线性相关与线性无关}
 \begin{definition}
@@ -504,7 +504,101 @@ $\beta \in <α_1,α_2,...,α_n>$（生成的子空间）。
     则$α_1,α_2,...,α_s$线性无关。
 \end{definition}
 
-对于现行方程组
+对于线性方程组
+
+\begin{enumerate}[(1)]
+    \item 若存在不全为$0$的$c_1,c_2,...c_n$，使得$c_1α_1+c_2α_2+...+c_nα_n=0 \quad \Longleftrightarrow \quad $方程组有非零解。 
+    \item $K^s$中的列向量$α_1,α_2,...,α_n$线性无关。$\quad \Longleftrightarrow \quad $齐次线性方程组$x_1α_1+x_2α_2+...+x_nα_n$只有零解。
+\end{enumerate}
+
+$K^n$中的列向量$α_1,α_2,...,α_n$线性相关$\quad \Longleftrightarrow \quad $ 以$α_1,α_2,...,α_n$为列向量的矩阵$A$的行列式：$|A|=0$
+
+$K^n$中的列向量$α_1,α_2,...,α_n$线性无关$\quad \Longleftrightarrow \quad $ 以$α_1,α_2,...,α_n$为列向量的矩阵$A$的行列式：$|A|≠ 0$
+
+行向量的性质与上述情况相同。
+
+\subsection{线性相关和线性无关的向量组}
+\begin{enumerate}[(1)]
+    \item $α$线性相关 $\quad \Longleftrightarrow \quad \exists k≠0$,使得 $kα=0 \quad \Longleftrightarrow \quad α=0$\\从而$α$线性无关  $\quad \Longleftrightarrow \quad  α ≠ 0$
+    \item 对于向量组$α_1,α_2,...,α_n$中，如果有一部分向量组线性相关，则$α_1,α_2,...,α_n$ 线性相关。
+    \item 向量组线性无关   $\quad \Longrightarrow \quad$ 不存在部分向量组线性相关（任何部分向量组线性无关）
+    \item 向量组 $α_1,α_2,...,α_s$ 线性相关 $\quad \Longleftrightarrow \quad$由定义可得，存在$K$中不全为$0$的数$k_1,k_2,...,k_s$使得：
+        \begin{equation*}
+            k_1α_1+k_2α_2+...+k_sα_s=0
+        \end{equation*}
+        不妨设$k_i≠ 0$,则有
+        \begin{equation*}
+            α_i=-\frac{1}{k_i}(k_1α_1+k_2α_2+...+k_{i-1}α_{i-1}+k_{i+1}α_{i+1}+k_sα_s)
+        \end{equation*}
+        $\quad \Longleftrightarrow \quad$ $α_1,α_2,...,α_s$ 至少有一个向量可以由其余的向量线性表出。其中第一个条件的必要性（"$\Leftarrow$"）的证明为：
+        \begin{proof}
+            设$α_j=l_1α_1+...+l_{j-1} α_{j-1}+l_{j+1} α_{j+1}+...+l_s α_s$\\
+            $\quad \Longrightarrow \quad 0=l_1α_1+...+l_{j-1} α_{j-1}-α_j+l_{j+1} α_{j+1}+...+l_s α_s   \quad \Longrightarrow \quad $
+            $α_1,α_2,...,α_s$线性相关。
+        \end{proof}
+        则有逆否命题：
+        \\向量组 $α_1,α_2,...,α_s$ 线性无关$\quad \Longleftrightarrow \quad$其中每一个向量都不能由其余的向量线性表出。
+\end{enumerate}
+
+
+\begin{proposition}
+若$β$可以由向量$α_1,α_2,...,α_s$,其表出方式是唯一的充分必要条件是$α_1,α_2,...,α_s$线性无关。
+\end{proposition}
+
+\begin{proof}
+    "$\Leftarrow$":\\
+    设
+    \begin{equation}
+    β=a_1α_1+a_2α_2+...+a_sα_s  \label{beta_1}
+    \end{equation}
+    假设表出不唯一，即$β$还可以表示成:
+    \begin{equation}
+    β=b_1 α_1+b_2 α_2+...+b_s α_s  \label{beta_2}
+    \end{equation}
+    其中$a_i ≠ b_i$.
+    \eqref{beta_2}-\eqref{beta_1}可以得到：
+    \begin{equation*}
+        0=(b_1-a_1)α_1+(b_2-a_2)α_2+...+(b_s-a_s)α_s 
+    \end{equation*}
+    由$α_1,α_2,...,α_s$线性无关，可以得到：
+    \begin{equation*}
+        a_i-b_i=0,i=1,2,...,s
+    \end{equation*}
+    即$a_i=b_i$,假设不成立,$β$的表出方式是唯一的。\\
+    "$\Rightarrow$":\\
+    反证法。假设$α_1,α_2,...,α_s$线性相关，则有$K$中的$k_1,k_2,...,k_s$($k_i$不全为零)使得：
+    \begin{equation*}
+        0=k_1α_1+k_2α_2+...+k_sα_s 
+    \end{equation*}
+    此外，由
+    \begin{equation}
+    β=a_1α_1+a_2α_2+...+a_sα_s  \label{beta_3}
+    \end{equation}
+    可以得到：
+    \begin{equation}
+        β=(a_1+k_1)α_1+(a_2+k_2)α_2+...+(a_s+k_s)α_s  \label{beta_4}
+    \end{equation}
+    由$k_1,k_2,...,k_s$不全为零，不妨设$k_i ≠ 0$，则有$a_i+k_i ≠ a_i$。则\eqref{beta_3}式和\eqref{beta_4}式相比较，至少有一项是不相等的（第$i$个位置），从而$β$有两种不相同的表出方式，这与已证明的必要性矛盾，故而假设不成立，$α_1,α_2,...,α_s$是线性无关的。
+
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 \end{document}
