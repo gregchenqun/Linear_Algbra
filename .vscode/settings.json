@@ -79,4 +79,16 @@
   "*.log",
   "*.fdb_latexmk"
   ],
+  "latex-workshop.view.pdf.external.command": {
+    "command": "C:/Program Files/SumatraPDF/SumatraPDF.exe", //SumatraPDF.exe的实际路径
+    "args": [
+        "-inverse-search",
+        "\"C:/Program Files/Microsoft VS Code/code.exe\" -g \"%f:%l\"", //修改为你的具体vscode.exe的路径
+        "%PDF%"
+    ]
+},
+
+
+
+
   }

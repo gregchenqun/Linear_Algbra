@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2018.9.8)  31 MAR 2019 20:39
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2018.9.8)  1 APR 2019 20:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2154,30 +2154,25 @@ LaTeX Warning: Command \textcircled invalid in math mode on input line 100.
 LaTeX Font Warning: Font shape `OMS/TimesNewRoman(0)/m/n' undefined
 (Font)              using `OMS/cmsy/m/n' instead on input line 100.
 
-[3]
-Overfull \hbox (21.65375pt too wide) detected at line 161
-[] [] [] [] []
- []
+[3] [4]
 
-[4]
-
-LaTeX Warning: Command \textcircled invalid in math mode on input line 261.
+LaTeX Warning: Command \textcircled invalid in math mode on input line 264.
 
 
-LaTeX Warning: Command \textcircled invalid in math mode on input line 261.
+LaTeX Warning: Command \textcircled invalid in math mode on input line 264.
 
 
-LaTeX Warning: Command \textcircled invalid in math mode on input line 261.
+LaTeX Warning: Command \textcircled invalid in math mode on input line 264.
 
 
-LaTeX Warning: Command \textcircled invalid in math mode on input line 261.
+LaTeX Warning: Command \textcircled invalid in math mode on input line 264.
 
 [5] [6] [7] [8] [9] [10] [11]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 602.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 602.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 607.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 607.
  (./elegantnote.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 602.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 602.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 607.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 607.
 Package rerunfilecheck Info: File `elegantnote.out' has not changed.
 (rerunfilecheck)             Checksum: 61E04CFF6742E1B740659FEC0630CA5A.
 
@@ -2188,7 +2183,7 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Here is how much of TeX's memory you used:
  45486 strings out of 492962
  853949 string characters out of 6136968
- 1241717 words of memory out of 5000000
+ 1236717 words of memory out of 5000000
  48929 multiletter control sequences out of 15000+600000
  537031 words of font info for 90 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191

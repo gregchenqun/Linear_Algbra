@@ -79,7 +79,7 @@ $n$阶行列式为$n!$项代数和,其中每一项是不同行不同列的$n$个
 \end{vmatrix}
 :=\sum_{j_1j_2...j_n}(-1)^{\tau(j_1j_2...j_n)}a_{1j_1}a_{2j_2}...a_{nj_n}
 \end{equation*}
-记作$|A|$或者$\mathrm {det}\quad A$
+记作$|A|$或者$\mathrm {det}A$
 \end{definition}
 
 特别地,可以写作:
@@ -135,29 +135,32 @@ $B$的行列式可以表示为：
 
 \begin{property}
     \begin{equation*}
+        \begin{aligned}
+            &
+            \begin{vmatrix} 
+                a_{11}&a_{12} & a_{13} &...& a_{1n}\\
+                ...&...&...&...&...\\
+                b_1+c_1&b_2+c_2 & b_3+c_3 &...& b_n+c_n\\
+                ...&...&...&...&...\\
+                a_{n1}&a_{n2} & a_{n3} &...& a_{nn}
+            \end{vmatrix}
+        \\=&
         \begin{vmatrix} 
             a_{11}&a_{12} & a_{13} &...& a_{1n}\\
             ...&...&...&...&...\\
-            b_1+c_1&b_2+c_2 & b_3+c_3 &...& b_n+c_n\\
+            b_1&b_2 & b_3 &...& b_n\\
             ...&...&...&...&...\\
-            a_{n1}&a_{n2} & a_{n3} &...& a_{nn}
-        \end{vmatrix}
-       =
-       \begin{vmatrix} 
-        a_{11}&a_{12} & a_{13} &...& a_{1n}\\
-        ...&...&...&...&...\\
-        b_1&b_2 & b_3 &...& b_n\\
-        ...&...&...&...&...\\
-        a_{n1}&a_{n2} & a_{n3} &...& a_{nn}\
-        \end{vmatrix}
-        +
-        \begin{vmatrix} 
-            a_{11}&a_{12} & a_{13} &...& a_{1n}\\
-            ...&...&...&...&...\\
-            c_1&c_2 & c_3 &...& c_n\\
-            ...&...&...&...&...\\
-            a_{n1}&a_{n2} & a_{n3} &...& a_{nn}
-        \end{vmatrix}
+            a_{n1}&a_{n2} & a_{n3} &...& a_{nn}\
+            \end{vmatrix}
+            +
+            \begin{vmatrix} 
+                a_{11}&a_{12} & a_{13} &...& a_{1n}\\
+                ...&...&...&...&...\\
+                c_1&c_2 & c_3 &...& c_n\\
+                ...&...&...&...&...\\
+                a_{n1}&a_{n2} & a_{n3} &...& a_{nn}
+            \end{vmatrix}
+        \end{aligned}
     \end{equation*}
     \end{property}
 \begin{proof}
