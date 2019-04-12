@@ -317,8 +317,6 @@ $B$的行列式可以表示为：
         &=|A|+l0=|A|
         \end{aligned}
         \end{equation*}
-
-
 \end{proof}
 
 \section{线性空间}
@@ -565,7 +563,7 @@ $K^n$中的列向量$α_1,α_2,...,α_n$线性无关$\quad \Longleftrightarrow \
     \end{equation*}
     由$α_1,α_2,...,α_s$线性无关，可以得到：
     \begin{equation*}
-        a_i-b_i=0,i=1,2,...,s
+        a_i-b_i=0,\quad i=1,2,...,s
     \end{equation*}
     即$a_i=b_i$,假设不成立,$β$的表出方式是唯一的。\\
     "$\Rightarrow$":\\
@@ -582,25 +580,71 @@ $K^n$中的列向量$α_1,α_2,...,α_n$线性无关$\quad \Longleftrightarrow \
         β=(a_1+k_1)α_1+(a_2+k_2)α_2+...+(a_s+k_s)α_s  \label{beta_4}
     \end{equation}
     由$k_1,k_2,...,k_s$不全为零，不妨设$k_i ≠ 0$，则有$a_i+k_i ≠ a_i$。则\eqref{beta_3}式和\eqref{beta_4}式相比较，至少有一项是不相等的（第$i$个位置），从而$β$有两种不相同的表出方式，这与已证明的必要性矛盾，故而假设不成立，$α_1,α_2,...,α_s$是线性无关的。
+\end{proof}
 
+\begin{proposition}
+    设$α_1,α_2,...,α_s$线性无关,若$α_1,α_2,...,α_s,\beta$线性相关，那么$\beta$可以由$α_1,α_2,...,α_s$线性表出.
+\end{proposition}
+\begin{proof}
+    由$α_1,α_2,...,α_s,\beta$线性相关，则存在不全为零的一组数$k_1,k_2,...,.k_s,l$,使得:
+    \begin{equation*}
+        k_1 α_1+k_2 α_2+...+k_s α_s+l \beta =0 
+    \end{equation*}
+    若$l=0$,则有
+    \begin{equation*}
+        k_1 α_1+k_2 α_2+...+k_s α_s=0 
+    \end{equation*}
+    由$α_1,α_2,...,α_s$线性无关，则有$k_1,k_2,...,.k_s$全为零，再加上$l$,有$k_1,k_2,...,.k_s,l$全为零，与$α_1,α_2,...,α_s,\beta$线性相关矛盾，假设不成立。所以$l\neq 0$.
+    则有
+    \begin{equation*}
+         \beta =-\frac{k_1}{l} α_1-\frac{k_2}{l} α_2-...-\frac{k_s}{l} α_s 
+    \end{equation*}
 \end{proof}
 
 
+\subsection{极大线性无关组}
+\begin{definition}
+    \begin{equation*}
+        <α_1,α_2,...,α_s>:=\{k_1 α_1+k_2 α_2+...+k_s α_s|k_i\in K,i=1,2,...,s\}
+    \end{equation*}
+称为$α_1,α_2,...,α_s$生成的向量空间。
+\end{definition}
 
 
+\begin{definition}
+    $α_1,α_2,...,α_s$的一个部分组若满足:
+    \begin{enumerate}[(a)]
+        \item 该部分组线性无关.
+        \item 从$α_1,α_2,...,α_s$中其余的向量中(若有)任取一个向量添加进来得到的新的部分组都线性相关.
+    \end{enumerate}
+    则称它是为$α_1,α_2,...,α_s$的极大线性无关组。
+\end{definition}
+
+\begin{definition}
+    若向量组$α_1,α_2,...,α_s$中的每一个向量都可以由$\beta_1,\beta_2,...,\beta_r$线性表出，则称$α_1,α_2,...,α_s$可以由$\beta_1,\beta_2,...,\beta_r$线性表出.
+    若$α_1,α_2,...,α_s$和$\beta_1,\beta_2,...,\beta_r$可以相互线性表出，则称这两个向量组是等价的，记作:
+    \begin{equation*}
+        \{α_1,α_2,...,α_s\} \cong \{\beta_1,\beta_2,...,\beta_r\}
+    \end{equation*}
+\end{definition}
 
 
+\begin{proposition}
+    $α_1,α_2,...,α_s$和它的任意一个极大线性无关组等价。
+\end{proposition}
+\begin{proof}
+不妨设$α_1,α_2,...,α_s$的一个极大线性无关组为$α_1,α_2,...,α_m(m≤s)$
+\begin{equation*}
+    α_j=0α_1+...+α_j+...+0\alpha_s,j=1,2,...,m
+\end{equation*}
 
+故而$α_1,α_2,...,α_m$中的所有的元素都可以由$α_1,α_2,...,α_s$线性表出。
 
+同时显然$α_1,α_2,...,α_m$可以由$α_1,α_2,...,α_m$线性表出。对于$α_j(m<j≤s)$，将其添加到$α_1,α_2,...,α_m$中，形成$α_1,α_2,...,α_m,α_j$,由极大线性无关组的定义，$α_1,α_2,...,α_m,α_j$线性相关，由前一命题可得，$α_j$
+可以由$α_1,α_2,...,α_m$线性表出，从而$α_1,α_2,...,α_s$可以由$α_1,α_2,...,α_m$线性表出。
 
-
-
-
-
-
-
-
-
+故而，$α_1,α_2,...,α_s$和$α_1,α_2,...,α_m$可以相互线性表出,$α_1,α_2,...,α_s$和它的任意一个极大线性无关组等价。
+\end{proof}
 
 
 
