@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2018.9.8)  12 APR 2019 20:12
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2018.9.8)  19 MAY 2019 20:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2167,12 +2167,17 @@ LaTeX Warning: Command \textcircled invalid in math mode on input line 264.
 
 LaTeX Warning: Command \textcircled invalid in math mode on input line 264.
 
-[5] [6] [7] [8] [9] [10] [11] [12]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 651.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 651.
+[5] [6] [7] [8] [9] [10] [11]
+Overfull \hbox (25.99562pt too wide) in paragraph at lines 655--656
+[]$[][][][] [][][] [][][][] [][][] [] [][][][] [][][] [][][][] [][][][] [][][][] [][][] [][][][] [][][] [] [][][][] [][][] [][][][] [][][] [] [][][][] [][][] [][][][] [][][] [] [][][][] [][][] [][][][] [][][]$\TU/TimesNewRoman(0)/m/it/12 ,
+ []
+
+[12] [13]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 699.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 699.
  (./elegantnote.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 651.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 651.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 699.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 699.
 Package rerunfilecheck Info: File `elegantnote.out' has not changed.
 (rerunfilecheck)             Checksum: A30306CAEEDD1330493D68F1396113AB.
 
@@ -2181,12 +2186,12 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 45486 strings out of 492962
- 853949 string characters out of 6136968
+ 45473 strings out of 492962
+ 853176 string characters out of 6136968
  1236717 words of memory out of 5000000
- 48929 multiletter control sequences out of 15000+600000
+ 48916 multiletter control sequences out of 15000+600000
  537031 words of font info for 90 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  73i,13n,80p,825b,598s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on elegantnote.pdf (12 pages).
+Output written on elegantnote.pdf (13 pages).
