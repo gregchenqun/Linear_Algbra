@@ -108,7 +108,7 @@
 	\newtheorem{theorem}{定理}[section] %
 	\newtheorem{lemma}[theorem]{引理} %
 	\newtheorem{proposition}[theorem]{命题} %
-	\newtheorem*{corollary}{推论} %
+	\newtheorem{corollary}[theorem]{推论} %
 	
 	\theoremstyle{definition} %
 	\newtheorem{definition}{定义}[section] %
