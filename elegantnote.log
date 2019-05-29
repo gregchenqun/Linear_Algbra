@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2018.5.11)  29 MAY 2019 16:30
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2018.5.11)  29 MAY 2019 16:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -11,8 +11,8 @@ Babel <3.20> and hyphenation patterns for 84 language(s) loaded.
 Document Class: elegantnote 2018/01/06 ElegantNote v2.00 class
 (d:/texlive/2018/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
-(d:/texlive/2018/texmf-dist/tex/latex/base/size12.clo
-File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+(d:/texlive/2018/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count80
 \c@section=\count81
@@ -825,7 +825,7 @@ File: xeCJK.cfg 2018/04/30 v3.7.1 Configuration file for xeCJK package
 File: xunicode.sty 2011/09/09 v0.981 provides access to latin accents and many other characters in Unicode lower plane
  (d:/texlive/2018/texmf-dist/tex/latex/tipa/t3enc.def
 File: t3enc.def 2001/12/31 T3 encoding
-LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/sl' in size <12> not available
+LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/sl' in size <10> not available
 (Font)              Font shape `TU/TimesNewRoman(0)/m/it' tried instead on input line 316.
 )
 \tipaTiiicode=\count197
@@ -1407,12 +1407,12 @@ Package: xpatch 2012/10/02 v0.3 Extending etoolbox patching commands
 . fontspec info: "defining-font"
 . 
 . Font family 'STIX2Math.otf(1)' created for font 'STIX2Math.otf' with options
-. [BoldItalicFont={},ItalicFont={},Script=Math,SizeFeatures={{Size=10-},{Size=7-10,Font=STIX2Math.otf,Style=MathScript},{Size=-7,Font=STIX2Math.otf,Style=MathScriptScript}}].
+. [BoldItalicFont={},ItalicFont={},Script=Math,SizeFeatures={{Size=8.5-},{Size=6-8.5,Font=STIX2Math.otf,Style=MathScript},{Size=-6,Font=STIX2Math.otf,Style=MathScriptScript}}].
 .  
 .  This font family consists of the following NFSS series/shapes:
 .  
 . - 'normal' (m/n) with NFSS spec.:
-. <10->"[STIX2Math.otf]/OT:script=math;language=DFLT;"<7-10>"[STIX2Math.otf]/OT:script=math;language=DFLT;+ssty=0;"<-7>"[STIX2Math.otf]/OT:script=math;language=DFLT;+ssty=1;"
+. <8.5->"[STIX2Math.otf]/OT:script=math;language=DFLT;"<6-8.5>"[STIX2Math.otf]/OT:script=math;language=DFLT;+ssty=0;"<-6>"[STIX2Math.otf]/OT:script=math;language=DFLT;+ssty=1;"
 . - 'small caps'  (m/sc) with NFSS spec.: 
 .................................................
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
@@ -1427,29 +1427,28 @@ LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 . fontspec info: "defining-font"
 . 
 . Font family 'STIX2Math.otf(2)' created for font 'STIX2Math.otf' with options
-. [BoldItalicFont={},ItalicFont={},Script=Math,SizeFeatures={{Size=10-},{Size=7-10,Font=STIX2Math.otf,Style=MathScript},{Size=-7,Font=STIX2Math.otf,Style=MathScriptScript}},Scale=1.00001,FontAdjustment={\fontdimen
-. 8\font =7.68pt\relax \fontdimen 9\font =7.02pt\relax \fontdimen 10\font
-. =5.64pt\relax \fontdimen 11\font =7.68pt\relax \fontdimen 12\font
-. =7.02pt\relax \fontdimen 13\font =4.32pt\relax \fontdimen 14\font
-. =4.32pt\relax \fontdimen 15\font =3.024pt\relax \fontdimen 16\font
-. =2.52pt\relax \fontdimen 17\font =2.52pt\relax \fontdimen 18\font
-. =2.76pt\relax \fontdimen 19\font =1.92pt\relax \fontdimen 22\font
-. =3.096pt\relax \fontdimen 20\font =0pt\relax \fontdimen 21\font =0pt\relax
-. }].
+. [BoldItalicFont={},ItalicFont={},Script=Math,SizeFeatures={{Size=8.5-},{Size=6-8.5,Font=STIX2Math.otf,Style=MathScript},{Size=-6,Font=STIX2Math.otf,Style=MathScriptScript}},Scale=1.00001,FontAdjustment={\fontdimen
+. 8\font =6.4pt\relax \fontdimen 9\font =5.85pt\relax \fontdimen 10\font
+. =4.7pt\relax \fontdimen 11\font =6.4pt\relax \fontdimen 12\font
+. =5.85pt\relax \fontdimen 13\font =3.6pt\relax \fontdimen 14\font
+. =3.6pt\relax \fontdimen 15\font =2.52pt\relax \fontdimen 16\font
+. =2.1pt\relax \fontdimen 17\font =2.1pt\relax \fontdimen 18\font =2.3pt\relax
+. \fontdimen 19\font =1.6pt\relax \fontdimen 22\font =2.58pt\relax \fontdimen
+. 20\font =0pt\relax \fontdimen 21\font =0pt\relax }].
 .  
 .  This font family consists of the following NFSS series/shapes:
 .  
 . - 'normal' (m/n) with NFSS spec.:
-. <10->s*[1.00001]"[STIX2Math.otf]/OT:script=math;language=DFLT;"<7-10>s*[1.00001]"[STIX2Math.otf]/OT:script=math;language=DFLT;+ssty=0;"<-7>s*[1.00001]"[STIX2Math.otf]/OT:script=math;language=DFLT;+ssty=1;"
+. <8.5->s*[1.00001]"[STIX2Math.otf]/OT:script=math;language=DFLT;"<6-8.5>s*[1.00001]"[STIX2Math.otf]/OT:script=math;language=DFLT;+ssty=0;"<-6>s*[1.00001]"[STIX2Math.otf]/OT:script=math;language=DFLT;+ssty=1;"
 . - 'small caps'  (m/sc) with NFSS spec.: 
 . and font adjustment code:
-. \fontdimen 8\font =7.68pt\relax \fontdimen 9\font =7.02pt\relax \fontdimen
-. 10\font =5.64pt\relax \fontdimen 11\font =7.68pt\relax \fontdimen 12\font
-. =7.02pt\relax \fontdimen 13\font =4.32pt\relax \fontdimen 14\font
-. =4.32pt\relax \fontdimen 15\font =3.024pt\relax \fontdimen 16\font
-. =2.52pt\relax \fontdimen 17\font =2.52pt\relax \fontdimen 18\font
-. =2.76pt\relax \fontdimen 19\font =1.92pt\relax \fontdimen 22\font
-. =3.096pt\relax \fontdimen 20\font =0pt\relax \fontdimen 21\font =0pt\relax 
+. \fontdimen 8\font =6.4pt\relax \fontdimen 9\font =5.85pt\relax \fontdimen
+. 10\font =4.7pt\relax \fontdimen 11\font =6.4pt\relax \fontdimen 12\font
+. =5.85pt\relax \fontdimen 13\font =3.6pt\relax \fontdimen 14\font
+. =3.6pt\relax \fontdimen 15\font =2.52pt\relax \fontdimen 16\font
+. =2.1pt\relax \fontdimen 17\font =2.1pt\relax \fontdimen 18\font =2.3pt\relax
+. \fontdimen 19\font =1.6pt\relax \fontdimen 22\font =2.58pt\relax \fontdimen
+. 20\font =0pt\relax \fontdimen 21\font =0pt\relax 
 .................................................
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
 (Font)              `symbols' in the math version `normal' on input line 77.
@@ -1463,20 +1462,20 @@ LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
 . fontspec info: "defining-font"
 . 
 . Font family 'STIX2Math.otf(3)' created for font 'STIX2Math.otf' with options
-. [BoldItalicFont={},ItalicFont={},Script=Math,SizeFeatures={{Size=10-},{Size=7-10,Font=STIX2Math.otf,Style=MathScript},{Size=-7,Font=STIX2Math.otf,Style=MathScriptScript}},Scale=0.99999,FontAdjustment={\fontdimen
-. 8\font =0.816pt\relax \fontdimen 9\font =1.62pt\relax \fontdimen 10\font
-. =1.62pt\relax \fontdimen 11\font =3.6pt\relax \fontdimen 12\font
-. =8.04pt\relax \fontdimen 13\font =0pt\relax }].
+. [BoldItalicFont={},ItalicFont={},Script=Math,SizeFeatures={{Size=8.5-},{Size=6-8.5,Font=STIX2Math.otf,Style=MathScript},{Size=-6,Font=STIX2Math.otf,Style=MathScriptScript}},Scale=0.99999,FontAdjustment={\fontdimen
+. 8\font =0.68pt\relax \fontdimen 9\font =1.35pt\relax \fontdimen 10\font
+. =1.35pt\relax \fontdimen 11\font =3.0pt\relax \fontdimen 12\font
+. =6.7pt\relax \fontdimen 13\font =0pt\relax }].
 .  
 .  This font family consists of the following NFSS series/shapes:
 .  
 . - 'normal' (m/n) with NFSS spec.:
-. <10->s*[0.99999]"[STIX2Math.otf]/OT:script=math;language=DFLT;"<7-10>s*[0.99999]"[STIX2Math.otf]/OT:script=math;language=DFLT;+ssty=0;"<-7>s*[0.99999]"[STIX2Math.otf]/OT:script=math;language=DFLT;+ssty=1;"
+. <8.5->s*[0.99999]"[STIX2Math.otf]/OT:script=math;language=DFLT;"<6-8.5>s*[0.99999]"[STIX2Math.otf]/OT:script=math;language=DFLT;+ssty=0;"<-6>s*[0.99999]"[STIX2Math.otf]/OT:script=math;language=DFLT;+ssty=1;"
 . - 'small caps'  (m/sc) with NFSS spec.: 
 . and font adjustment code:
-. \fontdimen 8\font =0.816pt\relax \fontdimen 9\font =1.62pt\relax \fontdimen
-. 10\font =1.62pt\relax \fontdimen 11\font =3.6pt\relax \fontdimen 12\font
-. =8.04pt\relax \fontdimen 13\font =0pt\relax 
+. \fontdimen 8\font =0.68pt\relax \fontdimen 9\font =1.35pt\relax \fontdimen
+. 10\font =1.35pt\relax \fontdimen 11\font =3.0pt\relax \fontdimen 12\font
+. =6.7pt\relax \fontdimen 13\font =0pt\relax 
 .................................................
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
 (Font)              `largesymbols' in the math version `normal' on input line 77.
@@ -2032,12 +2031,12 @@ Package caption Info: End \AtBeginDocument code.
 * \topmargin=-37.0pt
 * \headheight=12.0pt
 * \headsep=25.0pt
-* \topskip=12.0pt
+* \topskip=10.0pt
 * \footskip=30.0pt
-* \marginparwidth=44.0pt
-* \marginparsep=10.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
 * \columnsep=10.0pt
-* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -2076,17 +2075,17 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `TU/STIX2Math.otf(2)/m/n' will be
-(Font)              scaled to size 12.00018pt on input line 2.
+(Font)              scaled to size 10.00015pt on input line 2.
 LaTeX Font Info:    Font shape `TU/STIX2Math.otf(2)/m/n' will be
-(Font)              scaled to size 8.41495pt on input line 2.
+(Font)              scaled to size 7.01247pt on input line 2.
 LaTeX Font Info:    Font shape `TU/STIX2Math.otf(2)/m/n' will be
-(Font)              scaled to size 6.60612pt on input line 2.
+(Font)              scaled to size 5.5051pt on input line 2.
 LaTeX Font Info:    Font shape `TU/STIX2Math.otf(3)/m/n' will be
-(Font)              scaled to size 11.99982pt on input line 2.
+(Font)              scaled to size 9.99985pt on input line 2.
 LaTeX Font Info:    Font shape `TU/STIX2Math.otf(3)/m/n' will be
-(Font)              scaled to size 8.41469pt on input line 2.
+(Font)              scaled to size 7.01224pt on input line 2.
 LaTeX Font Info:    Font shape `TU/STIX2Math.otf(3)/m/n' will be
-(Font)              scaled to size 6.60593pt on input line 2.
+(Font)              scaled to size 5.50493pt on input line 2.
 )
 \tf@toc=\write5
 \openout5 = `elegantnote.toc'.
@@ -2097,17 +2096,17 @@ File: se-ascii-print.def 2016/05/16 v1.11 stringenc: Printable ASCII characters
 
 ]
 LaTeX Font Info:    Font shape `TU/STIX2Math.otf(2)/m/n' will be
-(Font)              scaled to size 14.4002pt on input line 15.
+(Font)              scaled to size 12.00018pt on input line 15.
 LaTeX Font Info:    Font shape `TU/STIX2Math.otf(2)/m/n' will be
-(Font)              scaled to size 10.00015pt on input line 15.
+(Font)              scaled to size 8.00012pt on input line 15.
 LaTeX Font Info:    Font shape `TU/STIX2Math.otf(2)/m/n' will be
-(Font)              scaled to size 7.0001pt on input line 15.
+(Font)              scaled to size 6.00009pt on input line 15.
 LaTeX Font Info:    Font shape `TU/STIX2Math.otf(3)/m/n' will be
-(Font)              scaled to size 14.39977pt on input line 15.
+(Font)              scaled to size 11.99982pt on input line 15.
 LaTeX Font Info:    Font shape `TU/STIX2Math.otf(3)/m/n' will be
-(Font)              scaled to size 9.99985pt on input line 15.
+(Font)              scaled to size 7.99988pt on input line 15.
 LaTeX Font Info:    Font shape `TU/STIX2Math.otf(3)/m/n' will be
-(Font)              scaled to size 6.9999pt on input line 15.
+(Font)              scaled to size 5.99991pt on input line 15.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -2116,11 +2115,6 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 21.
-
-
-Overfull \hbox (27.77939pt too wide) in paragraph at lines 53--58
-\TU/宋体(0)/m/n/12 设 对 换 之 前 的 排 列 为 $[][][][][][][][][][][][][][][][][][][][][][][]$\TU/TimesNewRoman(0)/m/n/12 , \TU/宋体(0)/m/n/12 则 对 换 之 后 的 排 列 为：| $[][][][][][][][][][][][][][][][][][][][][][][]$\TU/TimesNewRoman(0)/m/n/12 ,
- []
 
 [2]
 
@@ -2160,17 +2154,12 @@ LaTeX Warning: Command \textcircled invalid in math mode on input line 264.
 
 LaTeX Warning: Command \textcircled invalid in math mode on input line 264.
 
-[5] [6] [7] [8] [9] [10] [11]
-Overfull \hbox (25.99562pt too wide) in paragraph at lines 655--656
-[]$[][][][] [][][] [][][][] [][][] [] [][][][] [][][] [][][][] [][][][] [][][][] [][][] [][][][] [][][] [] [][][][] [][][] [][][][] [][][] [] [][][][] [][][] [][][][] [][][] [] [][][][] [][][] [][][][] [][][]$\TU/TimesNewRoman(0)/m/it/12 ,
- []
-
-[12] [13] [14] [15]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 837.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 837.
+[5] [6] [7] [8] [9] [10] [11] [12]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 839.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 839.
  (./elegantnote.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 837.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 837.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 839.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 839.
 Package rerunfilecheck Info: File `elegantnote.out' has not changed.
 (rerunfilecheck)             Checksum: 703C80303A075F8C0A8FB70DA9DC3490.
 
@@ -2179,12 +2168,12 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 44686 strings out of 492970
- 849978 string characters out of 6137298
- 1068256 words of memory out of 5000000
- 48131 multiletter control sequences out of 15000+600000
- 534965 words of font info for 88 fonts, out of 8000000 for 9000
+ 44685 strings out of 492970
+ 849907 string characters out of 6137298
+ 1071118 words of memory out of 5000000
+ 48130 multiletter control sequences out of 15000+600000
+ 535066 words of font info for 88 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 73i,13n,80p,10431b,598s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 73i,13n,80p,10431b,600s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on elegantnote.pdf (15 pages).
+Output written on elegantnote.pdf (12 pages).

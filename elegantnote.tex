@@ -726,10 +726,10 @@ $K^n$中的列向量$α_1,α_2,...,α_n$线性无关$\quad \Longleftrightarrow \
 \end{proof}
 
 
-\begin{corollary} 
+\begin{lemma} 
     \label{1}
     若$β_1,β_2,...,β_r$可以由$α_1,α_2,...,α_s$线性表处，且$β_1,β_2,...,β_r$线性无关，那么$r≤s$.
-\end{corollary}
+\end{lemma}
 
 \begin{corollary}
    等价的线性无关的两个向量组所含有的向量的个数相等。即
@@ -754,8 +754,8 @@ $K^n$中的列向量$α_1,α_2,...,α_n$线性无关$\quad \Longleftrightarrow \
 
 \begin{proposition}
 向量组$α_1,α_2,...,α_s$线性无关 \\
-$\Rightarrow α_1,α_2,...,α_s$是其本身的极大线性无关组\\
-$\Rightarrow \mathrm{rank}\{α_1,α_2,...,α_s\}=s$
+$\Leftrightarrow α_1,α_2,...,α_s$是其本身的极大线性无关组\\
+$\Leftrightarrow \mathrm{rank}\{α_1,α_2,...,α_s\}=s$
 \end{proposition}
 
 \begin{proposition}
@@ -766,14 +766,16 @@ $\Rightarrow \mathrm{rank}\{α_1,α_2,...,α_s\}=s$
     取(\uppercase\expandafter{\romannumeral1})中的极大线性无关组(\uppercase\expandafter{\romannumeral1})',(\uppercase\expandafter{\romannumeral2})中极大线性无关组(\uppercase\expandafter{\romannumeral2})',
 
     \begin{equation*}
-        (\uppercase\expandafter{\romannumeral1})\cong (\uppercase\expandafter{\romannumeral1})'\\
-        (\uppercase\expandafter{\romannumeral2}) \cong (\uppercase\expandafter{\romannumeral2})'
+        \begin{aligned}
+            (\uppercase\expandafter{\romannumeral1})\cong (\uppercase\expandafter{\romannumeral1})'\\
+            (\uppercase\expandafter{\romannumeral2}) \cong (\uppercase\expandafter{\romannumeral2})'
+        \end{aligned}
     \end{equation*}
     则有
     \begin{equation*}
         (\uppercase\expandafter{\romannumeral1})'\cong (\uppercase\expandafter{\romannumeral1})'\\
     \end{equation*}
-    即 (\uppercase\expandafter{\romannumeral1})' 可以由  (\uppercase\expandafter{\romannumeral2})'线性表出.由推论\ref{1}，  (\uppercase\expandafter{\romannumeral1})'所含向量的个数 $\leq$ (\uppercase\expandafter{\romannumeral2})'所含向量的个数。即为
+    即 (\uppercase\expandafter{\romannumeral1})' 可以由  (\uppercase\expandafter{\romannumeral2})'线性表出.由引理\ref{1}，  (\uppercase\expandafter{\romannumeral1})'所含向量的个数 $\leq$ (\uppercase\expandafter{\romannumeral2})'所含向量的个数。即为
     $\mathrm{rank}(\uppercase\expandafter{\romannumeral1}) \leq \mathrm{rank}(\uppercase\expandafter{\romannumeral2})$
 \end{proof}
 
@@ -831,7 +833,7 @@ $\Rightarrow \mathrm{rank}\{α_1,α_2,...,α_s\}=s$
     若$V$是无限维的线性空间，则$V$的任意一个基都是无限子集。 
 \end{corollary}
 
-\begin{proof}
+\begin{proof} 
     
 \end{proof}
 \end{document}

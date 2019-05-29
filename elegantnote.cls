@@ -1,6 +1,6 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{elegantnote}[2018/01/06 ElegantNote v2.00 class]
-\LoadClass[12pt,final]{article}
+\LoadClass[10pt,final]{article}
 
 \RequirePackage{kvoptions}
 \RequirePackage{ifthen}
