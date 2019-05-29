@@ -29,7 +29,7 @@
     "-interaction=nonstopmode",
     "-file-line-error",
     "-pdf",
-    "%DOC%"
+    "%DOCFILE%"
   ]
   }, {
   "name": "xelatex",
@@ -38,7 +38,7 @@
     "-synctex=1",
     "-interaction=nonstopmode",
     "-file-line-error",
-    "%DOC%"
+    "%DOCFILE%"
   ]
   }, {
   "name": "pdflatex",
@@ -47,7 +47,7 @@
     "-synctex=1",
     "-interaction=nonstopmode",
     "-file-line-error",
-    "%DOC%"
+    "%DOCFILE%"
   ]
   }, {
   "name": "bibtex",

@@ -692,7 +692,62 @@ $K^n$中的列向量$α_1,α_2,...,α_n$线性无关$\quad \Longleftrightarrow \
             &β_r=a_{1r} α_1+...+  a_{sr}α_s\\
         \end{aligned}
     \end{equation*}
+    令
+    \begin{equation*}
+        x_1β_1+x_2β_2+...+x_rβ_r=0
+    \end{equation*}
+    则有
+    \begin{equation*}
+        \begin{aligned}
+            &x_1(a_{11} α_1+...+  a_{s1}α_s)\\
+            +&x_2(a_{12} α_1+...+  a_{s2}α_s)\\
+            &\vdots\\
+            +&x_r(a_{1r} α_1+...+  a_{sr}α_s)=0\\
+        \end{aligned}
+        \Rightarrow
+        (a_{11}x_1+...+a_{1r}x_r)α_1+...+(a_{s1}x_1+...+a_{sr}x_r)α_s=0
+    \end{equation*}
+    取向量组$\alpha_1,\alpha_2,...,\alpha_s$中的一个极大线性无关组，不妨设其为$\alpha_1,\alpha_2,...,\alpha_m$,且有$m≤s<r$,则有方程组：
+    \begin{equation*}
+        \begin{aligned}
+            &a_{11} x_1+...+  a_{1r}x_r=0\\
+            &a_{21} x_1+...+  a_{2r}x_r=0\\
+            &\vdots\\
+            &a_{m1} x_1+...+  a_{mr}x_r=0\\
+        \end{aligned}
+    \end{equation*}
+    由$m≤s<r$，方程组由非零解，设非零解为$k_1,k_2,...,k_r$,得到
+    \begin{equation*}
+        k_1\beta_1+k_2\beta_2+...+k_r\beta_r=0
+    \end{equation*}
+    $k_1,k_2,...,k_r$不全为零，从而$β_1,β_2,...,β_r$线性相关。
 \end{proof}
+
+
+\begin{corollary}
+    若$β_1,β_2,...,β_r$可以由$α_1,α_2,...,α_s$线性表处，且$β_1,β_2,...,β_r$线性无关，那么$r≤s$.
+\end{corollary}
+
+\begin{corollary}
+   等价的线性无关的两个向量组所含有的向量的个数相等。即
+   \begin{equation*}
+    \{α_1,α_2,...,α_m\} \cong \{γ_1,γ_2,...,γ_s\} \Rightarrow m=s
+   \end{equation*}
+\end{corollary}
+
+\begin{proof}
+    由前一推论可以得到。
+\end{proof}
+
+
+\begin{corollary}
+    $α_1,α_2,...,α_m$的任意两个极大线性无关组所含有的向量个数相等。
+ \end{corollary}
+
+\begin{definition}
+    向量组$α_1,α_2,...,α_s$的任意一个极大线性无关组所含有的向量个数称为$α_1,α_2,...,α_s$的秩(rank).只含有0的向量组的秩规定为0.
+    记作 $\mathrm{rank}\{α_1,α_2,...,α_s\}$
+\end{definition}
 
 
 
