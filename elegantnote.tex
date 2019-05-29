@@ -692,8 +692,148 @@ $K^n$中的列向量$α_1,α_2,...,α_n$线性无关$\quad \Longleftrightarrow \
             &β_r=a_{1r} α_1+...+  a_{sr}α_s\\
         \end{aligned}
     \end{equation*}
+    令
+    \begin{equation*}
+        x_1β_1+x_2β_2+...+x_rβ_r=0
+    \end{equation*}
+    则有
+    \begin{equation*}
+        \begin{aligned}
+            &x_1(a_{11} α_1+...+  a_{s1}α_s)\\
+            +&x_2(a_{12} α_1+...+  a_{s2}α_s)\\
+            &\vdots\\
+            +&x_r(a_{1r} α_1+...+  a_{sr}α_s)=0\\
+        \end{aligned}
+    \end{equation*}
+    \begin{equation*}
+        \Rightarrow 
+        (a_{11}x_1+...+a_{1r}x_r)α_1+...+(a_{s1}x_1+...+a_{sr}x_r)α_s=0
+    \end{equation*}
+    取向量组$\alpha_1,\alpha_2,...,\alpha_s$中的一个极大线性无关组，不妨设其为$\alpha_1,\alpha_2,...,\alpha_m$,且有$m≤s<r$,则有方程组：
+    \begin{equation*}
+        \begin{aligned}
+            &a_{11} x_1+...+  a_{1r}x_r=0\\
+            &a_{21} x_1+...+  a_{2r}x_r=0\\
+            &\vdots\\
+            &a_{m1} x_1+...+  a_{mr}x_r=0\\
+        \end{aligned}
+    \end{equation*}
+    由$m≤s<r$，方程组由非零解，设非零解为$k_1,k_2,...,k_r$,得到
+    \begin{equation*}
+        k_1\beta_1+k_2\beta_2+...+k_r\beta_r=0
+    \end{equation*}
+    $k_1,k_2,...,k_r$不全为零，从而$β_1,β_2,...,β_r$线性相关。
 \end{proof}
 
 
+\begin{lemma} 
+    \label{1}
+    若$β_1,β_2,...,β_r$可以由$α_1,α_2,...,α_s$线性表处，且$β_1,β_2,...,β_r$线性无关，那么$r≤s$.
+\end{lemma}
 
+\begin{corollary}
+   等价的线性无关的两个向量组所含有的向量的个数相等。即
+   \begin{equation*}
+    \{α_1,α_2,...,α_m\} \cong \{γ_1,γ_2,...,γ_s\} \Rightarrow m=s
+   \end{equation*}
+\end{corollary}
+
+\begin{proof}
+    由前一推论可以得到。
+\end{proof}
+
+
+\begin{corollary}
+    $α_1,α_2,...,α_m$的任意两个极大线性无关组所含有的向量个数相等。
+ \end{corollary}
+
+\begin{definition}
+    向量组$α_1,α_2,...,α_s$的任意一个极大线性无关组所含有的向量个数称为$α_1,α_2,...,α_s$的秩(rank).只含有0的向量组的秩规定为0.
+    记作 $\mathrm{rank}\{α_1,α_2,...,α_s\}$
+\end{definition}
+
+\begin{proposition}
+向量组$α_1,α_2,...,α_s$线性无关 \\
+$\Leftrightarrow α_1,α_2,...,α_s$是其本身的极大线性无关组\\
+$\Leftrightarrow \mathrm{rank}\{α_1,α_2,...,α_s\}=s$
+\end{proposition}
+
+\begin{proposition}
+    向量组(\uppercase\expandafter{\romannumeral1})可以由向量组(\uppercase\expandafter{\romannumeral2})线性表出，则$\mathrm{rank}(\uppercase\expandafter{\romannumeral1}) \leq \mathrm{rank}(\uppercase\expandafter{\romannumeral2})$
+\end{proposition}
+
+\begin{proof}
+    取(\uppercase\expandafter{\romannumeral1})中的极大线性无关组(\uppercase\expandafter{\romannumeral1})',(\uppercase\expandafter{\romannumeral2})中极大线性无关组(\uppercase\expandafter{\romannumeral2})',
+
+    \begin{equation*}
+        \begin{aligned}
+            (\uppercase\expandafter{\romannumeral1})\cong (\uppercase\expandafter{\romannumeral1})'\\
+            (\uppercase\expandafter{\romannumeral2}) \cong (\uppercase\expandafter{\romannumeral2})'
+        \end{aligned}
+    \end{equation*}
+    则有
+    \begin{equation*}
+        (\uppercase\expandafter{\romannumeral1})'\cong (\uppercase\expandafter{\romannumeral1})'\\
+    \end{equation*}
+    即 (\uppercase\expandafter{\romannumeral1})' 可以由  (\uppercase\expandafter{\romannumeral2})'线性表出.由引理\ref{1}，  (\uppercase\expandafter{\romannumeral1})'所含向量的个数 $\leq$ (\uppercase\expandafter{\romannumeral2})'所含向量的个数。即为
+    $\mathrm{rank}(\uppercase\expandafter{\romannumeral1}) \leq \mathrm{rank}(\uppercase\expandafter{\romannumeral2})$
+\end{proof}
+
+\begin{corollary}
+    \label{4}
+等价的向量组的秩相等。
+\end{corollary}
+
+\subsection{基、维数和坐标}
+
+
+\begin{definition}
+    设$V$是数域$K$上任意的线性空间。\\
+    $V$的一个有限子集$\{α_1,α_2,...,α_s\}$线性相(无)关
+    $:\Leftrightarrow$向量组$α_1,α_2,...,α_s$线性相(无)关\\
+    $V$的一个无限子集$S$线性相关
+    $:\Leftrightarrow S$有一个有限子集是线性相关的\\
+    从而有，$V$的一个无限子集$S$线性无关 $:\Leftrightarrow S$任何一个有限子集是线性无关的
+\end{definition}
+
+\begin{definition}
+    设$V$是数域$K$上任意的线性空间。$V$的一个子集$S$若满足以下条件：
+    \begin{enumerate}
+        \item $S$是线性无关的
+        \item $V$中的任意向量可以由$S$中的有限多个向量线性表出
+    \end{enumerate}
+    则称$S$是$V$的一个基.
+\end{definition}
+
+若$S=\{α_1,α_2,...,α_s\}$,则向量组$α_1,α_2,...,α_s$是$V$的一个（有序）基（$∅$规定为线性无关）
+
+\begin{proposition}
+任何一个线性空间都有一个基。
+\end{proposition}
+
+\begin{definition}
+    若$V$有一个基是有限维的，则称$V$是有限维的。\\
+    若$V$有一个基是无限维的，则称$V$是无限维的。
+\end{definition}
+
+\begin{theorem}
+    \label{thr_2}
+    若$V$是有限维的，则$V$的任意两个基所含有向量的个数相同。
+\end{theorem}
+
+\begin{proof}
+    设$V$有一个基$ α_1,α_2,...,α_n$,任取另外一个基$S$,假设$S$所含有的向量个数$k>n$,则$S$中可以取出$β_1,β_2,..,β_{n+1}$,且$β_1,β_2,..,β_{n+1}$可以由$ α_1,α_2,...,α_n$线性表出。由$n+1>n$,据引理\ref{1},$β_1,β_2,..,β_{n+1}$线性相关，这与$S$是一个基矛盾，假设不成立，进一步有$k<=n$
+    \begin{equation*}
+        \{β_1,β_2,..,β_{k}\} \cong \{α_1,α_2,...,α_n\}
+    \end{equation*}
+    由两个向量组都是线性无关的，从而由推论\ref{4},等价的线性无关向量组含有相同的个数，从而$k=n$
+\end{proof}
+
+\begin{corollary}
+    若$V$是无限维的线性空间，则$V$的任意一个基都是无限子集。 
+\end{corollary}
+
+\begin{proof} 
+    
+\end{proof}
 \end{document}

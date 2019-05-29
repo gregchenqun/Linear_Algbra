@@ -1,6 +1,6 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{elegantnote}[2018/01/06 ElegantNote v2.00 class]
-\LoadClass[12pt,final]{article}
+\LoadClass[10pt,final]{article}
 
 \RequirePackage{kvoptions}
 \RequirePackage{ifthen}
@@ -108,7 +108,7 @@
 	\newtheorem{theorem}{定理}[section] %
 	\newtheorem{lemma}[theorem]{引理} %
 	\newtheorem{proposition}[theorem]{命题} %
-	\newtheorem*{corollary}{推论} %
+	\newtheorem{corollary}[theorem]{推论} %
 	
 	\theoremstyle{definition} %
 	\newtheorem{definition}{定义}[section] %
