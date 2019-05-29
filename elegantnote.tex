@@ -726,7 +726,8 @@ $K^n$中的列向量$α_1,α_2,...,α_n$线性无关$\quad \Longleftrightarrow \
 \end{proof}
 
 
-\begin{corollary}
+\begin{corollary} 
+    \label{1}
     若$β_1,β_2,...,β_r$可以由$α_1,α_2,...,α_s$线性表处，且$β_1,β_2,...,β_r$线性无关，那么$r≤s$.
 \end{corollary}
 
@@ -751,6 +752,36 @@ $K^n$中的列向量$α_1,α_2,...,α_n$线性无关$\quad \Longleftrightarrow \
     记作 $\mathrm{rank}\{α_1,α_2,...,α_s\}$
 \end{definition}
 
+\begin{proposition}
+向量组$α_1,α_2,...,α_s$线性无关 \\
+$\Rightarrow α_1,α_2,...,α_s$是其本身的极大线性无关组\\
+$\Rightarrow \mathrm{rank}\{α_1,α_2,...,α_s\}=s$
+\end{proposition}
+
+\begin{proposition}
+    向量组(\uppercase\expandafter{\romannumeral1})可以由向量组(\uppercase\expandafter{\romannumeral2})线性表出，则$\mathrm{rank}(\uppercase\expandafter{\romannumeral1}) \leq \mathrm{rank}(\uppercase\expandafter{\romannumeral2})$
+\end{proposition}
+
+\begin{proof}
+    取(\uppercase\expandafter{\romannumeral1})中的极大线性无关组(\uppercase\expandafter{\romannumeral1})',(\uppercase\expandafter{\romannumeral2})中极大线性无关组(\uppercase\expandafter{\romannumeral2})',
+
+    \begin{equation*}
+        (\uppercase\expandafter{\romannumeral1})\cong (\uppercase\expandafter{\romannumeral1})'\\
+        (\uppercase\expandafter{\romannumeral2}) \cong (\uppercase\expandafter{\romannumeral2})'
+    \end{equation*}
+    则有
+    \begin{equation*}
+        (\uppercase\expandafter{\romannumeral1})'\cong (\uppercase\expandafter{\romannumeral1})'\\
+    \end{equation*}
+    即 (\uppercase\expandafter{\romannumeral1})' 可以由  (\uppercase\expandafter{\romannumeral2})'线性表出由推论\ref{1}，  (\uppercase\expandafter{\romannumeral1})'所含向量的个数 $\leq$ (\uppercase\expandafter{\romannumeral2})'所含向量的个数。即为
+    $\mathrm{rank}(\uppercase\expandafter{\romannumeral1}) \leq \mathrm{rank}(\uppercase\expandafter{\romannumeral2})$
+\end{proof}
+
+\begin{corollary}
+等价的向量组的秩相等。
+\end{corollary}
+
+\subsection{基、维数和坐标}
 
 
 \end{document}
