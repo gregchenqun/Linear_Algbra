@@ -103,6 +103,8 @@
 \newtheoremstyle{definition}{3pt}{3pt}{\itshape}{}{\color{ecolor}\bfseries}{}{0.5em}{}
 \newtheoremstyle{remark}{3pt}{3pt}{\itshape}{}{\color{ecolor}\bfseries}{}{0.5em}{}
 
+
+
 \ifdefstring{\ELEGANT@lang}{cn}{
   	\theoremstyle{plain}% default
 	\newtheorem{theorem}{定理}[section] %

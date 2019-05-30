@@ -543,6 +543,7 @@ $K^n$中的列向量$α_1,α_2,...,α_n$线性无关$\quad \Longleftrightarrow \
 
 
 \begin{proposition}
+    \label{linear_show_only}
 若$β$可以由向量$α_1,α_2,...,α_s$,其表出方式是唯一的充分必要条件是$α_1,α_2,...,α_s$线性无关.
 \end{proposition}
 
@@ -784,8 +785,10 @@ $\Leftrightarrow \mathrm{rank}\{α_1,α_2,...,α_s\}=s$
 等价的向量组的秩相等。
 \end{corollary}
 
-\subsection{基、维数和坐标}
 
+
+
+\subsection{基、维数和坐标}
 
 \begin{definition}
     设$V$是数域$K$上任意的线性空间。\\
@@ -834,6 +837,78 @@ $\Leftrightarrow \mathrm{rank}\{α_1,α_2,...,α_s\}=s$
 \end{corollary}
 
 \begin{proof} 
-    
+    假设$V$有一个基是有限子集，由$V$中任何一个基的向量个数相同，这与$V$是无限维矛盾。
+\end{proof}
+
+
+\begin{definition}
+    若$V$是有限维的，则将$V$的任何一个基所含有的向量个数称为$V$的维数，记作$\mathrm{dim}_K V$或者$\mathrm{dim} V$；若$V$是无限维的，则将$V$的维数记成$\mathrm{dim} V=∞$；$\{0\}$的维度规定为0.
+\end{definition}
+
+\begin{proposition}
+    \label{12}
+    设$\mathrm{dim} V=n$,则$V$任意$n+1$个向量都线性相关。
+\end{proposition}
+
+\begin{proof}
+    设$α_1,α_2,...,α_n$是$V$的一个基，则对于$V$中的任意$n+1$个向量$β_1,β_2,...,β_n,β_{n+1}$都可以由$α_1,α_2,...,α_n$线性表出，由$n+1>n$,从而$β_1,β_2,...,β_n,β_{n+1}$线性相关。
+\end{proof}
+
+\begin{definition}
+    设$\mathrm{dim} V=n$,取$V$的一个基$α_1,α_2,...,α_n$，则$V$中的任意一个向量可以表示成
+    \begin{equation*}
+        α=a_1 α_1+a_2  α_2+...+a_n  α_n
+    \end{equation*}
+    且表示方式唯一。将$(a_1,a_2,...,a_n)$称为$α$在基$α_1,α_2,...,α_n$下的坐标。
+\end{definition}
+
+\begin{proof}
+    由定义\ref{linear_show_only}可得.
+\end{proof}
+
+对于
+\begin{equation*}
+     e_1=\begin{pmatrix} 
+            1\\
+            0\\
+            0\\
+            \vdots\\
+            0
+         \end{pmatrix}
+         ,e_2=\begin{pmatrix} 
+                0\\
+                1\\
+                0\\
+                \vdots\\
+                0
+            \end{pmatrix}
+            ,\dots
+        ,e_n=\begin{pmatrix} 
+            0\\
+            0\\
+            0\\
+            \vdots\\
+            1
+         \end{pmatrix}
+\end{equation*}
+\begin{equation*}
+    α=\begin{pmatrix} 
+        a_1\\
+        a_2\\
+        a_3\\
+        \vdots\\
+        a_n
+     \end{pmatrix}
+     =a_1e_1+a_2e_2+...+a_3e_3
+\end{equation*}
+
+$e_1,e_2,...,e_n$为$K_n$的一个基（标准基）。
+
+\begin{proposition}
+    设$\mathrm{dim} V=n$,则$V$中任意$n$个线性无关的向量都是$V$的一个基。
+\end{proposition}
+
+\begin{proof}
+    从$V$中取线性无关的向量组$α_1,α_2,...,α_n$，任取$\beta \in V$,由命题\ref{12},$α_1,α_2,...,α_n,\beta$线性相关，从而$α_1,α_2,...,α_n$是极大线性无关组，$\beta$可以由$α_1,α_2,...,α_n$线性表出。由$\beta$的任意性可以得出，$α_1,α_2,...,α_n$是$V$的一个基。
 \end{proof}
 \end{document}

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2018.5.11)  29 MAY 2019 16:55
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2018.5.11)  30 MAY 2019 16:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1736,10 +1736,10 @@ File: tikzlibraryfadings.code.tex 2009/11/15 v3.0.1a (rcs-revision 1.2)
 File: pgflibraryfadings.code.tex 2008/02/07 v3.0.1a (rcs-revision 1.3)
 )))
 \symcmlargesymbols=\mathgroup4
-LaTeX Font Info:    Redeclaring math symbol \intop on input line 229.
-LaTeX Font Info:    Redeclaring math symbol \ointop on input line 231.
-LaTeX Font Info:    Redeclaring math symbol \sumop on input line 233.
-LaTeX Font Info:    Redeclaring math symbol \prodop on input line 235.
+LaTeX Font Info:    Redeclaring math symbol \intop on input line 231.
+LaTeX Font Info:    Redeclaring math symbol \ointop on input line 233.
+LaTeX Font Info:    Redeclaring math symbol \sumop on input line 235.
+LaTeX Font Info:    Redeclaring math symbol \prodop on input line 237.
 ) (d:/texlive/2018/texmf-dist/tex/latex/microtype/microtype.sty
 Package: microtype 2018/01/14 v2.7a Micro-typographical refinements (RS)
 \MT@toks=\toks44
@@ -2154,12 +2154,12 @@ LaTeX Warning: Command \textcircled invalid in math mode on input line 264.
 
 LaTeX Warning: Command \textcircled invalid in math mode on input line 264.
 
-[5] [6] [7] [8] [9] [10] [11] [12]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 839.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 839.
+[5] [6] [7] [8] [9] [10] [11] [12] [13]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 914.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 914.
  (./elegantnote.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 839.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 839.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 914.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 914.
 Package rerunfilecheck Info: File `elegantnote.out' has not changed.
 (rerunfilecheck)             Checksum: 703C80303A075F8C0A8FB70DA9DC3490.
 
@@ -2168,12 +2168,12 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 44685 strings out of 492970
- 849907 string characters out of 6137298
+ 44700 strings out of 492970
+ 850702 string characters out of 6137298
  1071118 words of memory out of 5000000
- 48130 multiletter control sequences out of 15000+600000
+ 48145 multiletter control sequences out of 15000+600000
  535066 words of font info for 88 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  73i,13n,80p,10431b,600s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on elegantnote.pdf (12 pages).
+Output written on elegantnote.pdf (13 pages).
