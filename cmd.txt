@@ -1,4 +1,4 @@
-提交到远程的github
+锟结交锟斤拷远锟教碉拷github
 
 git  init
 
@@ -16,7 +16,7 @@ git commit -a -m "date"
 
 git push -u origin master
 
-拉回本地
+锟斤拷锟截憋拷锟斤拷
 git pull origin master  
 
 

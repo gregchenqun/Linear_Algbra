@@ -8,7 +8,7 @@
 \usepackage{listings} 
 \lstset{language=[LaTeX]{TeX},basicstyle=\footnotesize\ttfamily}
 
-
+ 
 \begin{document}
 
 \tableofcontents
@@ -17,7 +17,7 @@
 
 % logo\centerline{\includegraphics[width=0.25\textwidth]{ElegantLaTeX_green.pdf}}
 \section{行列式}
-\subsection{$n$元排列}
+\subsection{n元排列}
 
 \begin{definition}[$n$元排列]
 $1,2,3,...,n$（或者$n$个不同的正整数）的全排列称为一个$n$元排列.
@@ -65,7 +65,7 @@ $$
 \end{proof}
 
 
-\subsection{$n$阶行列式}
+\subsection{n阶行列式}
 
 \begin{definition}[$n$阶行列式]
 $n$阶行列式为$n!$项代数和,其中每一项是不同行不同列的$n$个元素的乘积.每一项按照行指标的自然顺序排列,列指标所成的排列是奇排列时带负号,偶排列时带正号.
@@ -318,6 +318,79 @@ $$
         $$
 \end{proof}
 
+\subsection{Laplace 定理}
+\begin{theorem}
+    对于行列式$A=a(i,j)$,取定$k$行，$i_1,i_2,...,i_k$行，$k$列，$j_1,j_2,...,j_k$列，其中$i_1<i_2<...<i_k,j_1<j_2<...<j_k$,行列交叉处的$k^2$个元素按照原来的排列顺序形成一个$k$阶行列式，称为$A$的$k$阶子式，记作
+    \begin{equation*}
+        A\left(
+            \begin{aligned}
+                &i_1,i_2,...,i_k\\
+                &j_1,j_2,...,j_k
+            \end{aligned}
+        \right)
+    \end{equation*}
+    划去上述$k$行$k$列后剩余的元素按照原有顺序组成$n-k$阶行列式，称为$k$阶行列式的余子式。
+    令
+    $$\{i_1',i_2',...,i_{n-k}'\}=\{1,2,...,n\}\backslash \{i_1,i_2,...,i_k\}$$
+    其中$i_1'<i_2'<...<i_{n-k}'$
+    $$\{j_1',j_2',...,j_{n-k}'\}=\{1,2,...,n\}\backslash \{j_1,j_2,...,j_k\}$$
+    其中$j_1'<j_2'<...<j_{n-k}'$
+    这个余子式是$A$的$n-k$阶子式，记作：
+    
+    \begin{equation*}
+        A\left(
+            \begin{aligned}
+                &i_1',i_2',...,i_{n-k}'\\
+                &j_1',j_2',...,j_{n-k}'
+            \end{aligned}
+        \right)
+    \end{equation*}
+    另外将
+    \begin{equation*}
+        (-1)^{i_1+i_2+...+i_k+j_1+j_2+...+j_k}
+        A\left(
+            \begin{aligned}
+                &i_1',i_2',...,i_{n-k}'\\
+                &j_1',j_2',...,j_{n-k}'
+            \end{aligned}
+        \right)
+    \end{equation*}
+    称作代数余子式。可以证明
+    \begin{equation*}
+        |A|=(-1)^{i_1+i_2+...+i_k+j_1+j_2+...+j_k}
+        A\left(
+            \begin{aligned}
+                &i_1',i_2',...,i_{n-k}'\\
+                &j_1',j_2',...,j_{n-k}'
+            \end{aligned}
+        \right)
+    \end{equation*}
+\end{theorem}
+\begin{proof}
+
+\begin{equation*}
+    \begin{aligned}
+        |A|=&\sum_{u_1...u_k v_1...v_{n-k}}(-1)^{i_1-1+i_2-2+...+i_k-k+\tau(u_1u_2...u_kv_1v_2...v_{n-k})} \\
+        &\quad \times a_{i_1 u_1}a_{i_2u_2}...a_{i_k u_k}a_{i_1'v_1}...a_{i_{n-k},v_{n-k}}\\
+        \\
+        &=\sum_{1 \leq j_1<...<j_k \leq n  } \sum_{j_1...j_k} \sum_{j_1'...j_k'} (-1)^{i_1+...+i_k-k(k+1)/2}\\
+        & \times (-1)^{j_1+...+j_k-k(k+1)/2+\tau(u_1...u_k)+\tau(v_1...v_{n-k})}\\
+        &\times a_{i_1 u_1}a_{i_2u_2}...a_{i_k u_k}a_{i_1'v_1}...a_{i_{n-k}'v_{n-k}}
+    \end{aligned}
+\end{equation*}
+    
+
+    其中，$j_1,...,j_n\in \{1,2,3,...,n\}$。
+
+    上式的本质是对$n$元全排列的一个拆解：先从$n$个数中选取$k$个出来，然后放到前$k$个位置，并作$k$元全排列，剩下的$n-k$个元素放到后$n-k$个位置，作$n-k$元全排列。可以证明以上方法得到的集合和$n$元全排列相等。论述如下：显然上述方法得到的每一个排列结果都是属于全排列结果之中的某一个；对于每一个$n$元全排列，设其为$m_1m_2...,m_kl_1l_2...l_{n-k}$,按照上述的方法，可以看作是，先从集合$\{1,2,3,...,n\}$中选取$\{m_1,m_2,...,m_k\}$出来，（其中自带大小关系），并且排列成$m_1m_2...,m_k$,剩余的部分排列成$l_1l_2...l_{n-k}$即可，从而两个排序方式所有结果构成的集合存在着一一对应的关系，从而上述方式可以得到$n$元全排列。第二种论述方法：首先上述方法得到的结果是全排列的一种，而上述方法得到的所有结果的总和为：
+    $$
+    \mathrm{C}_{n}^{k}k!(n-k)!=\frac{\mathrm{A}_n^k}{k!(n-k)!}k!(n-k)!=n!
+    $$
+    这个数和$n$元全排列结果和相等，从而上述方法得到的集合就是$n$元全排列结果集合。
+\end{proof}
+
+
+
 \section{线性空间}
 \subsection{线性空间的定义}
 
@@ -489,7 +562,7 @@ $K$中有一组$c_1,c_2,...,c_n$,使得$c_1α_1+c_2α_2+...+c_nα_n=β$
 $\\\Longleftrightarrow$
 $β$可以由$α_1,α_2,...,α_n$线性表出.
 $\\\Longleftrightarrow$
-$β \in <α_1,α_2,...,α_n>$（生成的子空间）.
+$β ∈ <α_1,α_2,...,α_n>$（生成的子空间）.
 
 \subsection{线性相关与线性无关}
 \begin{definition}
@@ -668,7 +741,7 @@ $K^n$中的列向量$α_1,α_2,...,α_n$线性无关$\quad \Longleftrightarrow \
     $$
         \begin{aligned}
             α_i&=\sum_{j=1}^{r}a_{ij}\sum_{l=1}^{t}b_{jl}γ_{l}=\sum_{j=1}^{r}\sum_{l=1}^{t}a_{ij}b_{jl}γ_{l}\\
-            &=\sum_{l=1}^{t}\sum_{j=1}^{r}a_{ij}b_{jl}γ_{l}=\sum_{l=1}^{t}γ_{l}[\sum_{j=1}^{r}a_{ij}b_{jl}γ_{l}]
+            &=\sum_{l=1}^{t}\sum_{j=1}^{r}a_{ij}b_{jl}γ_{l}=\sum_{l=1}^{t}γ_{l}\left[\sum_{j=1}^{r}a_{ij}b_{jl}γ_{l}\right]
         \end{aligned}
     $$
     所以有$α_i$可以由$γ_1,γ_2,...,γ_t$线性表出。
