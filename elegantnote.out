@@ -1,10 +1,11 @@
 \BOOKMARK [1][-]{section.1}{行列式}{}% 1
 \BOOKMARK [2][-]{subsection.1.1}{n元排列}{section.1}% 2
 \BOOKMARK [2][-]{subsection.1.2}{n阶行列式}{section.1}% 3
-\BOOKMARK [1][-]{section.2}{线性空间}{}% 4
-\BOOKMARK [2][-]{subsection.2.1}{线性空间的定义}{section.2}% 5
-\BOOKMARK [2][-]{subsection.2.2}{线性子空间}{section.2}% 6
-\BOOKMARK [2][-]{subsection.2.3}{线性相关与线性无关}{section.2}% 7
-\BOOKMARK [2][-]{subsection.2.4}{线性相关和线性无关的向量组}{section.2}% 8
-\BOOKMARK [2][-]{subsection.2.5}{极大线性无关组}{section.2}% 9
-\BOOKMARK [2][-]{subsection.2.6}{基、维数和坐标}{section.2}% 10
+\BOOKMARK [2][-]{subsection.1.3}{Laplace 定理}{section.1}% 4
+\BOOKMARK [1][-]{section.2}{线性空间}{}% 5
+\BOOKMARK [2][-]{subsection.2.1}{线性空间的定义}{section.2}% 6
+\BOOKMARK [2][-]{subsection.2.2}{线性子空间}{section.2}% 7
+\BOOKMARK [2][-]{subsection.2.3}{线性相关与线性无关}{section.2}% 8
+\BOOKMARK [2][-]{subsection.2.4}{线性相关和线性无关的向量组}{section.2}% 9
+\BOOKMARK [2][-]{subsection.2.5}{极大线性无关组}{section.2}% 10
+\BOOKMARK [2][-]{subsection.2.6}{基、维数和坐标}{section.2}% 11

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2018.5.11)  31 MAY 2019 10:35
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2018.5.11)  15 NOV 2019 17:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1949,7 +1949,8 @@ File: xunicode-extra.def 2018/04/30 v3.7.1 extra definition for xunicode
 Package: xeCJK-listings 2018/04/30 v3.7.1 xeCJK patch file for listings
 \l__xeCJK_listings_max_char_int=\count339
 \l__xeCJK_listings_flag_int=\count340
-) (./elegantnote.aux)
+)
+No file elegantnote.aux.
 \openout1 = `elegantnote.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
@@ -1968,7 +1969,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
 LaTeX Font Info:    ... okay on input line 12.
 LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 12.
 LaTeX Font Info:    Try loading font information for T3+cmr on input line 12.
- (d:/texlive/2018/texmf-dist/tex/latex/tipa/t3cmr.fd
+(d:/texlive/2018/texmf-dist/tex/latex/tipa/t3cmr.fd
 File: t3cmr.fd 2001/12/31 TIPA font definitions
 )
 LaTeX Font Info:    ... okay on input line 12.
@@ -2004,14 +2005,16 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 12.
 LaTeX Info: Redefining \pageref on input line 12.
 LaTeX Info: Redefining \nameref on input line 12.
- (./elegantnote.out) (./elegantnote.out)
 \@outlinefile=\write4
 \openout4 = `elegantnote.out'.
+
+
+
+Package hyperref Warning: Rerun to get /PageLabels entry.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
 *geometry* verbose mode - [ preamble ] result:
@@ -2069,32 +2072,18 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `宋体' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-(./elegantnote.toc
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `STIX2Math.otf' (encoding: TU).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-LaTeX Font Info:    Font shape `TU/STIX2Math.otf(2)/m/n' will be
-(Font)              scaled to size 10.00015pt on input line 2.
-LaTeX Font Info:    Font shape `TU/STIX2Math.otf(2)/m/n' will be
-(Font)              scaled to size 7.01247pt on input line 2.
-LaTeX Font Info:    Font shape `TU/STIX2Math.otf(2)/m/n' will be
-(Font)              scaled to size 5.5051pt on input line 2.
-LaTeX Font Info:    Font shape `TU/STIX2Math.otf(3)/m/n' will be
-(Font)              scaled to size 9.99985pt on input line 2.
-LaTeX Font Info:    Font shape `TU/STIX2Math.otf(3)/m/n' will be
-(Font)              scaled to size 7.01224pt on input line 2.
-LaTeX Font Info:    Font shape `TU/STIX2Math.otf(3)/m/n' will be
-(Font)              scaled to size 5.50493pt on input line 2.
-)
 \tf@toc=\write5
 \openout5 = `elegantnote.toc'.
 
- (d:/texlive/2018/texmf-dist/tex/generic/oberdiek/se-ascii-print.def
+(d:/texlive/2018/texmf-dist/tex/generic/oberdiek/se-ascii-print.def
 File: se-ascii-print.def 2016/05/16 v1.11 stringenc: Printable ASCII characters
 ) [1
 
 ]
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `STIX2Math.otf' (encoding: TU).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `TU/STIX2Math.otf(2)/m/n' will be
 (Font)              scaled to size 12.00018pt on input line 15.
 LaTeX Font Info:    Font shape `TU/STIX2Math.otf(2)/m/n' will be
@@ -2107,6 +2096,18 @@ LaTeX Font Info:    Font shape `TU/STIX2Math.otf(3)/m/n' will be
 (Font)              scaled to size 7.99988pt on input line 15.
 LaTeX Font Info:    Font shape `TU/STIX2Math.otf(3)/m/n' will be
 (Font)              scaled to size 5.99991pt on input line 15.
+LaTeX Font Info:    Font shape `TU/STIX2Math.otf(2)/m/n' will be
+(Font)              scaled to size 10.00015pt on input line 23.
+LaTeX Font Info:    Font shape `TU/STIX2Math.otf(2)/m/n' will be
+(Font)              scaled to size 7.01247pt on input line 23.
+LaTeX Font Info:    Font shape `TU/STIX2Math.otf(2)/m/n' will be
+(Font)              scaled to size 5.5051pt on input line 23.
+LaTeX Font Info:    Font shape `TU/STIX2Math.otf(3)/m/n' will be
+(Font)              scaled to size 9.99985pt on input line 23.
+LaTeX Font Info:    Font shape `TU/STIX2Math.otf(3)/m/n' will be
+(Font)              scaled to size 7.01224pt on input line 23.
+LaTeX Font Info:    Font shape `TU/STIX2Math.otf(3)/m/n' will be
+(Font)              scaled to size 5.50493pt on input line 23.
  [2]
 
 LaTeX Warning: Command \textcircled invalid in math mode on input line 100.
@@ -2137,26 +2138,86 @@ LaTeX Warning: Command \textcircled invalid in math mode on input line 264.
 
 LaTeX Warning: Command \textcircled invalid in math mode on input line 264.
 
-[5] [6] [7] [8] [9] [10] [11] [12] [13]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 917.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 917.
- (./elegantnote.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 917.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 917.
-Package rerunfilecheck Info: File `elegantnote.out' has not changed.
-(rerunfilecheck)             Checksum: 703C80303A075F8C0A8FB70DA9DC3490.
+[5] [6] [7] [8]
 
+LaTeX Warning: Reference `beta_2' on page 9 undefined on input line 576.
+
+
+LaTeX Warning: Reference `beta_1' on page 9 undefined on input line 576.
+
+
+LaTeX Warning: Reference `beta_3' on page 9 undefined on input line 598.
+
+
+LaTeX Warning: Reference `beta_4' on page 9 undefined on input line 598.
+
+[9] [10] [11]
+
+LaTeX Warning: Reference `1' on page 12 undefined on input line 794.
+
+
+LaTeX Warning: Reference `1' on page 12 undefined on input line 843.
+
+[12]
+
+LaTeX Warning: Reference `4' on page 13 undefined on input line 847.
+
+
+LaTeX Warning: Reference `linear_show_only' on page 13 undefined on input line 881.
+
+
+LaTeX Warning: Reference `12' on page 13 undefined on input line 927.
+
+[13]
+
+./elegantnote.tex:932: LaTeX Error: \begin{theorem} on input line 323 ended by \end{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.932 \end{document}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 932.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 932.
+(./elegantnote.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 932.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 932.
+
+
+Package rerunfilecheck Warning: File `elegantnote.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `elegantnote.out':
+(rerunfilecheck)             Before: 
+(rerunfilecheck)             After:  1283C6A033C35298BAB616E8AD6BA08A.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
- ) 
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ )
+(\end occurred inside a group at level 1)
+
+### semi simple group (level 1) entered at line 323 (\begingroup)
+### bottom level 
 Here is how much of TeX's memory you used:
- 44700 strings out of 492970
- 850702 string characters out of 6137298
- 1071118 words of memory out of 5000000
- 48145 multiletter control sequences out of 15000+600000
+ 44679 strings out of 492970
+ 849996 string characters out of 6137298
+ 1070118 words of memory out of 5000000
+ 48132 multiletter control sequences out of 15000+600000
  535066 words of font info for 88 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 73i,13n,80p,10431b,600s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 73i,13n,80p,10431b,655s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on elegantnote.pdf (13 pages).
+Error 1 (driver return code) generating output;
+file elegantnote.pdf may not be valid.

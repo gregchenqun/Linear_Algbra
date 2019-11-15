@@ -319,6 +319,75 @@ $B$的行列式可以表示为：
         \end{equation*}
 \end{proof}
 
+\subsection{Laplace 定理}
+\begin{theorem}
+    对于行列式$A=a(i,j)$,取定$k$行，$i_1,i_2,...,i_k$行，$k$列，$j_1,j_2,...,j_k$列，其中$i_1<i_2<...<i_k,j_1<j_2<...<j_k$,行列交叉处的$k^2$个元素按照原来的排列顺序形成一个$k$阶行列式，称为$A$的$k$阶子式，记作
+    \begin{equation*}
+        A\left(
+            \begin{aligned}
+                &i_1,i_2,...,i_k\\
+                &j_1,j_2,...,j_k
+            \end{aligned}
+        \right)
+    \end{equation*}
+    划去上述$k$行$k$列后剩余的元素按照原有顺序琮琤$n-k$阶行列式，称为$k$阶行列式的余子式。
+    令
+    $$\{i_1',i_2',...,i_{n-k}'\}=\{1,2,...,n\}\backslash \{i_1,i_2,...,i_k\}$$
+    其中$i_1'<i_2'<...<i_{n-k}'$
+    $$\{j_1',j_2',...,j_{n-k}'\}=\{1,2,...,n\}\backslash \{j_1,j_2,...,j_k\}$$
+    其中$j_1'<j_2'<...<j_{n-k}'$
+    这个余子式是$A$的$n-k$阶子式，记作：
+    
+    \begin{equation*}
+        A\left(
+            \begin{aligned}
+                &i_1‘,i_2’,...,i_{n-k}'\\
+                &j_1’,j_2‘,...,j_{n-k}'
+            \end{aligned}
+        \right)
+    \end{equation*}
+    另外将
+    \begin{equation*}
+        (-1)^{i_1+i_2+...+i_k+j_1+j_2+...+j_k}
+        A\left(
+            \begin{aligned}
+                &i_1,i_2,...,i_k\\
+                &j_1,j_2,...,j_k
+            \end{aligned}
+        \right)
+        A\left(
+            \begin{aligned}
+                &i_1‘,i_2’,...,i_{n-k}'\\
+                &j_1’,j_2‘,...,j_{n-k}'
+            \end{aligned}
+        \right)
+    \end{equation*}
+    称作代数余子式。可以证明
+    \begin{equation*}
+        |A|=(-1)^{i_1+i_2+...+i_k+j_1+j_2+...+j_k}
+
+        A\left(
+            \begin{aligned}
+                &i_1‘,i_2’,...,i_{n-k}'\\
+                &j_1’,j_2‘,...,j_{n-k}'
+            \end{aligned}
+        \right)
+    \end{equation*}
+\begin{proof}
+    \begin{equation*}
+        \begin{aligned}
+            |A|&=\sum_{u_1...u_k v_1...v_{n-k}}(-1)^{i_1-1+i_2-2+...+i_k-k+\tau(u_1u_2...u_kv_1v_2...v_{n-k})} \\
+            &\quad \times a_{i_1 u_1}a_{i_2u_2}...a_{i_k u_k}a_{i_1'v_1}...a_{i_{n-k},v_{n-k}}\\
+            &=\sum_{1\leq j_1<j_2<...<j_k\leq n\\ j_1,j_2,...,j_k \in \{1,2,...,n\}} \sum_{  j_1,...,j_k} \sum_{  j_1',...,j_k'} (-1)^{i_1+...+i_k-k(k+1)/2)}\\
+            &\quad \times (-1)^{j_1+...+j_k-k(k+1)/2+\tau(u_1...u_k)+\tau(v_1...v_{n-k})}\\
+            &\quad \times a_{i_1 u_1}a_{i_2u_2}...a_{i_k u_k}a_{i_1'v_1}...a_{i_{n-k},v_{n-k}}
+        \end{aligned}
+    \end{equation*}
+    上式的本质是对$n$元全排列的一个拆解过程：先从$n$个数中选取$k$个出来，然后放到前$k$个位置，作$k$元全排列，剩下的$n-k$个元素放到后$n-k$个位置，作$n-k$元全排列。可以证明以上方法得到的集合和$n$元全排列相等。论述如下：显然上述方法得到的每一个排列结果都是属于全排列结果之中的；对于每一个$n$元全排列，设其为$m_1m_2...,m_kl_1l_2...l_{n-k}$,按照上述的方法，可以看作是，先从集合$\{1,2,3,...,n\}$中选取$\{m_1,m_2,...,m_k\}$出来，（其中自带大小关系），并且排列成$m_1m_2...,m_k$,剩余的部分排列成$l_1l_2...l_{n-k}$即可，从而两个集合是双射。
+\end{proof}
+
+
+
 \section{线性空间}
 \subsection{线性空间的定义}
 
