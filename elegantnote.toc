@@ -1,6 +1,6 @@
 \contentsline {section}{\numberline {1}行列式}{2}{section.1}
-\contentsline {subsection}{\numberline {1.1}$n$元排列}{2}{subsection.1.1}
-\contentsline {subsection}{\numberline {1.2}$n$阶行列式}{3}{subsection.1.2}
+\contentsline {subsection}{\numberline {1.1}n元排列}{2}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}n阶行列式}{3}{subsection.1.2}
 \contentsline {section}{\numberline {2}线性空间}{5}{section.2}
 \contentsline {subsection}{\numberline {2.1}线性空间的定义}{5}{subsection.2.1}
 \contentsline {subsection}{\numberline {2.2}线性子空间}{7}{subsection.2.2}
