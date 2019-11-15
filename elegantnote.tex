@@ -15,8 +15,7 @@
 {\color{ecolor}{\maketitle}}
 
 
-% logo
-% \centerline{\includegraphics[width=0.25\textwidth]{ElegantLaTeX_green.pdf}}
+% logo\centerline{\includegraphics[width=0.25\textwidth]{ElegantLaTeX_green.pdf}}
 \section{行列式}
 \subsection{$n$元排列}
 
@@ -42,13 +41,13 @@ $1,2,3,...,n$（或者$n$个不同的正整数）的全排列称为一个$n$元�
 1.对换相邻位置的两个数.\\
 设对换之前的排列为$a_1a_2...a_ia_j...a_n$,则对换之后的排列为：$a_1a_2...a_ja_i...a_n$,两个排列进行比计较可以知道,
 对于前$i-1$个位置而言,互换前后的逆序数不变,对于第$j+1$到$n$个位置而言,互换前后的逆序数也没有改变.交换前,第$i,j$位置的逆序数和为：
-\begin{equation*}
+$$
 τ(a_i,a_j)+\sum_{k=j+1}^{n}\tau (a_i,a_k)+\sum_{k=j+1}^{n} \tau (a_j,a_k)
-\end{equation*}
+$$
 交换后,第$i,j$位置的逆序数和为：
-\begin{equation*}
+$$
 τ(a_j,a_i)+\sum_{k=j+1}^{n}\tau (a_j,a_k)+\sum_{k=j+1}^{n} \tau (a_i,a_k)
-\end{equation*}
+$$
 
 上述两式的差为$τ(a_j,a_i)-τ(a_i,a_j)=±1$,故两个排列的奇偶性相反.
 \\
@@ -70,7 +69,7 @@ $1,2,3,...,n$（或者$n$个不同的正整数）的全排列称为一个$n$元�
 
 \begin{definition}[$n$阶行列式]
 $n$阶行列式为$n!$项代数和,其中每一项是不同行不同列的$n$个元素的乘积.每一项按照行指标的自然顺序排列,列指标所成的排列是奇排列时带负号,偶排列时带正号.
-\begin{equation*}
+$$
 \begin{vmatrix} 
     a_{11}&a_{12} & a_{13} &...& a_{1n}\\
     a_{21}&a_{22} & a_{23} &...& a_{2n}\\
@@ -78,35 +77,35 @@ $n$阶行列式为$n!$项代数和,其中每一项是不同行不同列的$n$个
     a_{n1}&a_{n2} & a_{n3} &...& a_{nn}
 \end{vmatrix}
 :=\sum_{j_1j_2...j_n}(-1)^{\tau(j_1j_2...j_n)}a_{1j_1}a_{2j_2}...a_{nj_n}
-\end{equation*}
+$$
 记作$|A|$或者$\mathrm {det}A$
 \end{definition}
 
 特别地,可以写作:
-\begin{equation*}
+$$
 |A|:=\sum_{i_1i_2...i_n}(-1)^{\tau(i_1 i_2...i_n)}a_{i_1 1}a_{i_2 2}...a_{i_n n}
-\end{equation*}
+$$
 
 由上式可以得出结论：
 \begin{property}
-\begin{equation*}
+$$
     |A|:=|A^T|
-\end{equation*}
+$$
 \end{property}
 
 \begin{property}
 $A$作行变换,第$i$行乘以$k$,得到$A$
-    \begin{equation*}
+    $$
         A\stackrel{\textcircled{i}k}{\longrightarrow}B
-    \end{equation*}
+    $$
 得到
-    \begin{equation*}
+    $$
         |B|=k|A|
-    \end{equation*}
+    $$
 \end{property}
 
 \begin{proof}
-    \begin{equation*}
+    $$
         \begin{vmatrix} 
             a_{11}&a_{12} & a_{13} &...& a_{1n}\\
             ...&...&...&...&...\\
@@ -122,19 +121,19 @@ $A$作行变换,第$i$行乘以$k$,得到$A$
             ...&...&...&...&...\\
             a_{n1}&a_{n2} & a_{n3} &...& a_{nn}
         \end{vmatrix}
-    \end{equation*}
+    $$
 $B$的行列式可以表示为：
-\begin{equation*}
+$$
     \begin{aligned}
         |B|&=\sum_{j_1j_2...j_n}(-1)^{\tau(j_1 j_2...j_n)}a_{1 j_1}a_{2 j_2}...ka_{i,j_i}...a_{n j_n}\\
            &=k\sum_{j_1j_2...j_n}(-1)^{\tau(j_1 j_2...j_n)}a_{1 j_1}a_{2 j_2}...a_{i,j_i}...a_{n j_n}\\
            &=k|A|
     \end{aligned}
-\end{equation*}
+$$
 \end{proof}
 
 \begin{property}
-    \begin{equation*}
+    $$
         \begin{aligned}
             &
             \begin{vmatrix} 
@@ -161,12 +160,12 @@ $B$的行列式可以表示为：
                 a_{n1}&a_{n2} & a_{n3} &...& a_{nn}
             \end{vmatrix}
         \end{aligned}
-    \end{equation*}
+    $$
     \end{property}
 \begin{proof}
 
     设左式为$|A|$,则有
-    \begin{equation*}
+    $$
         \begin{aligned}
             |A|&=\sum_{j_1j_2...j_n}(-1)^{\tau(j_1 j_2...j_n)}a_{1 j_1}a_{2 j_2}...(b_{j_i}+c_{j_i})...a_{n j_n}\\
                &=\sum_{j_1j_2...j_n}(-1)^{\tau(j_1 j_2...j_n)}a_{1 j_1}a_{2 j_2}...b_{j_i}...a_{n j_n}+
@@ -188,19 +187,19 @@ $B$的行列式可以表示为：
                     a_{n1}&a_{n2} & a_{n3} &...& a_{nn}
                 \end{vmatrix}
         \end{aligned}
-    \end{equation*}
+    $$
 \end{proof}
 
 \begin{property}
-    \begin{equation*}
+    $$
         A\stackrel{(i,k)}{\longrightarrow}C \Rightarrow |C|=-|A|
-    \end{equation*}
+    $$
 \end{property}
 
 
 \begin{proof}
     设：
-    \begin{equation*}
+    $$
         |C|=   \begin{vmatrix} 
             a_{11}&a_{12} & a_{13} &...& a_{1n}\\
             ...&...&...&...&...\\
@@ -220,15 +219,15 @@ $B$的行列式可以表示为：
             ...&...&...&...&...\\
             a_{n1}&a_{n2} & a_{n3} &...& a_{nn}
             \end{vmatrix}
-    \end{equation*}
+    $$
 则有
-    \begin{equation*}
+    $$
         \begin{aligned}
             |C|&=  \sum_{j_1j_2...j_i...j_k...j_n}(-1)^{\tau(j_1 j_2...j_i...j_k...j_n)}a_{1 j_1}a_{2 j_2}...a_{k j_i}...a_{i j_k}...a_{n j_n}\\
                &= \sum_{j_1j_2...j_k...j_i...j_n}(-1)^{\tau(j_1 j_2...j_k...j_i...j_n)}a_{1 j_1}a_{2 j_2}...a_{i j_k}...a_{k j_i}...a_{n j_n}\\
                 &=(-1)|A|=-|A|\\
             \end{aligned}
-    \end{equation*}
+    $$
 \end{proof}
 
 
@@ -245,7 +244,7 @@ $B$的行列式可以表示为：
 \end{property}
 
 \begin{proof}
-    \begin{equation*}
+    $$
         \begin{vmatrix} 
             a_{11}&a_{12} & a_{13} &...& a_{1n}\\
             ...&...&...&...&...\\
@@ -256,19 +255,19 @@ $B$的行列式可以表示为：
             a_{n1}&a_{n2} & a_{n3} &...& a_{nn}
             \end{vmatrix}
         =l0=0
-        \end{equation*}
+        $$
 \end{proof}
 
 \begin{property}
-   \begin{equation*}
+   $$
     A\stackrel{\textcircled{k}+\textcircled{i}l}{\longrightarrow}D \Rightarrow |A|=|D|
-    \end{equation*}
+    $$
 \end{property}
 
 
 \begin{proof}
     设
-    \begin{equation*}
+    $$
         |D|=
         \begin{vmatrix} 
             a_{11}&a_{12} & a_{13} &...& a_{1n}\\
@@ -289,9 +288,9 @@ $B$的行列式可以表示为：
                 ...&...&...&...&...\\
                 a_{n1}&a_{n2} & a_{n3} &...& a_{nn}
                 \end{vmatrix}
-        \end{equation*}
+        $$
 则有
-    \begin{equation*}
+    $$
         \begin{aligned}
         |D|&=
             \begin{vmatrix} 
@@ -316,14 +315,14 @@ $B$的行列式可以表示为：
                 \\
         &=|A|+l0=|A|
         \end{aligned}
-        \end{equation*}
+        $$
 \end{proof}
 
 \section{线性空间}
 \subsection{线性空间的定义}
 
 \begin{definition}
-    $$S\times M:=\{(a,b)|A∈ S,b ∈ M\}$$
+    $$S\times M:=\{(a,b)|a∈ S,b ∈ M\}$$
 称为$S$与$M$的笛卡尔积
 \end{definition}
 
@@ -348,16 +347,16 @@ $B$的行列式可以表示为：
 \end{definition}
 \begin{example}
     $\mathbb{R}^X:=$\{非空集合$X$到$R$的映射\},称为$X$上的实值函数.规定：
-    \begin{equation*}
+    $$
         \begin{aligned}
         &(f+g)(x):=f(x)+g(x),&\forall x ∈ X\\
         &(kf)(x):=kf(x), &\forall x ∈ X,k∈ \mathbb{R}\\
         \end{aligned}
-    \end{equation*}\
+    $$\
     零函数为：
-    \begin{equation*}
+    $$
         0(x):=0,\forall x ∈ X
-    \end{equation*}
+    $$
     易证$\mathbb{R}^X$是$\mathbb{R}$上的一个线性空间.
 \end{example}
 
@@ -378,12 +377,12 @@ $B$的行列式可以表示为：
 
 \begin{proof}
     假设负元不唯一,设$β_1,β_2$都是$α$的负元,且有$β_1 ≠ β_2 $.则有
-    \begin{equation*}
+    $$
         \begin{aligned}
             β_1+α+β_2=β_1+(α+β_2)=β_1+0=β_1\\
             β_1+α+β_2= (β_1+α)+β_2=0+β_2=β_2\\
         \end{aligned}
-    \end{equation*}
+    $$
     所以$β_1=β_2$,与假设矛盾,故而假设不成立.
 \end{proof}
 
@@ -393,13 +392,13 @@ $B$的行列式可以表示为：
 \end{property}
 
 \begin{proof}
-    \begin{equation*}
+    $$
         \begin{aligned}
         &0α=(0+0)α=0α+0α\\
         &0α+(-0α)=0α+0α+(-α)\\
         &0=0α
         \end{aligned}
-    \end{equation*}
+    $$
 \end{proof}
 
 
@@ -408,13 +407,13 @@ $B$的行列式可以表示为：
 \end{property}
 
 \begin{proof}
-    \begin{equation*}
+    $$
         \begin{aligned}
         &k0=k(0+0)=k0+k0\\
         &k0+(-k0)=k0+k0+(-k0)\\
         &0=k0
         \end{aligned}
-    \end{equation*}
+    $$
 \end{proof}
 
 \begin{property}
@@ -423,9 +422,9 @@ $B$的行列式可以表示为：
 
 \begin{proof}
     假设$k≠ 0$
-    \begin{equation*}
+    $$
         α=1α=(k^{-1}k)α=k^{-1}(kα)
-    \end{equation*}
+    $$
     由$kα=0$,则有$α=0$
 \end{proof}
 
@@ -435,9 +434,9 @@ $B$的行列式可以表示为：
  \end{property}
  
  \begin{proof}
-     \begin{equation*}
+     $$
          α+(-1)α=1α+(-1)α=(1-1)α=0
-     \end{equation*}
+     $$
      所以$(-1)α$是$α$的负元,为$-α$.
  \end{proof}
 
@@ -495,13 +494,13 @@ $β \in <α_1,α_2,...,α_n>$（生成的子空间）.
 \subsection{线性相关与线性无关}
 \begin{definition}
     设$V$是数域$K$上的一个线性空间，对于$V$中的一个向量组：$α_1,α_2,...,α_s,(s≥1)$，若$K$中有不全为$0$的一组数，使得：
-    \begin{equation*}
+    $$
         k_1α_1+k_2 α_2+...+k_s α_s=0
-    \end{equation*}
+    $$
     则称$α_1,α_2,...,α_s$线性相关，否则，称$α_1,α_2,...,α_s$线性无关.即:
-    \begin{equation*}
+    $$
         k_1 α_1+k_2 α_2+...+k_s α_s=0 \quad \Longrightarrow \quad k_1=k_2=...=k_s=0
-    \end{equation*}
+    $$
     则$α_1,α_2,...,α_s$线性无关.
 \end{definition}
 
@@ -524,13 +523,13 @@ $K^n$中的列向量$α_1,α_2,...,α_n$线性无关$\quad \Longleftrightarrow \
     \item 对于向量组$α_1,α_2,...,α_n$中，如果有一部分向量组线性相关，则$α_1,α_2,...,α_n$ 线性相关.
     \item 向量组线性无关   $\quad \Longrightarrow \quad$ 不存在部分向量组线性相关（任何部分向量组线性无关）
     \item 向量组 $α_1,α_2,...,α_s$ 线性相关 $\quad \Longleftrightarrow \quad$由定义可得，存在$K$中不全为$0$的数$k_1,k_2,...,k_s$使得：
-        \begin{equation*}
+        $$
             k_1α_1+k_2α_2+...+k_sα_s=0
-        \end{equation*}
+        $$
         不妨设$k_i≠ 0$,则有
-        \begin{equation*}
+        $$
             α_i=-\frac{1}{k_i}(k_1α_1+k_2α_2+...+k_{i-1}α_{i-1}+k_{i+1}α_{i+1}+k_sα_s)
-        \end{equation*}
+        $$
         $\quad \Longleftrightarrow \quad$ $α_1,α_2,...,α_s$ 至少有一个向量可以由其余的向量线性表出.其中第一个条件的必要性（"$\Leftarrow$"）的证明为：
         \begin{proof}
             设$α_j=l_1α_1+...+l_{j-1} α_{j-1}+l_{j+1} α_{j+1}+...+l_s α_s$\\
@@ -559,19 +558,19 @@ $K^n$中的列向量$α_1,α_2,...,α_n$线性无关$\quad \Longleftrightarrow \
     \end{equation}
     其中$a_i ≠ b_i$.
     \eqref{beta_2}-\eqref{beta_1}可以得到：
-    \begin{equation*}
+    $$
         0=(b_1-a_1)α_1+(b_2-a_2)α_2+...+(b_s-a_s)α_s 
-    \end{equation*}
+    $$
     由$α_1,α_2,...,α_s$线性无关，可以得到：
-    \begin{equation*}
+    $$
         a_i-b_i=0,\quad i=1,2,...,s
-    \end{equation*}
+    $$
     即$a_i=b_i$,假设不成立,$β$的表出方式是唯一的.\\
     "$\Rightarrow$":\\
     反证法.假设$α_1,α_2,...,α_s$线性相关，则有$K$中的$k_1,k_2,...,k_s$($k_i$不全为零)使得：
-    \begin{equation*}
+    $$
         0=k_1α_1+k_2α_2+...+k_sα_s 
-    \end{equation*}
+    $$
     此外，由
     \begin{equation}
     β=a_1α_1+a_2α_2+...+a_sα_s  \label{beta_3}
@@ -588,26 +587,26 @@ $K^n$中的列向量$α_1,α_2,...,α_n$线性无关$\quad \Longleftrightarrow \
 \end{proposition}
 \begin{proof}
     由$α_1,α_2,...,α_s,β$线性相关，则存在不全为零的一组数$k_1,k_2,...,.k_s,l$,使得:
-    \begin{equation*}
+    $$
         k_1 α_1+k_2 α_2+...+k_s α_s+l β =0 
-    \end{equation*}
+    $$
     若$l=0$,则有
-    \begin{equation*}
+    $$
         k_1 α_1+k_2 α_2+...+k_s α_s=0 
-    \end{equation*}
+    $$
     由$α_1,α_2,...,α_s$线性无关，则有$k_1,k_2,...,.k_s$全为零，再加上$l$,有$k_1,k_2,...,.k_s,l$全为零，与$α_1,α_2,...,α_s,β$线性相关矛盾，假设不成立.所以$l\neq 0$.
     则有
-    \begin{equation*}
+    $$
          β =-\frac{k_1}{l} α_1-\frac{k_2}{l} α_2-...-\frac{k_s}{l} α_s 
-    \end{equation*}
+    $$
 \end{proof}
 
 
 \subsection{极大线性无关组}
 \begin{definition}
-    \begin{equation*}
+    $$
         <α_1,α_2,...,α_s>:=\{k_1 α_1+k_2 α_2+...+k_s α_s|k_i\in K,i=1,2,...,s\}
-    \end{equation*}
+    $$
 称为$α_1,α_2,...,α_s$生成的向量空间.
 \end{definition}
 
@@ -624,9 +623,9 @@ $K^n$中的列向量$α_1,α_2,...,α_n$线性无关$\quad \Longleftrightarrow \
 \begin{definition}
     若向量组$α_1,α_2,...,α_s$中的每一个向量都可以由$β_1,β_2,...,β_r$线性表出，则称$α_1,α_2,...,α_s$可以由$β_1,β_2,...,β_r$线性表出.
     若$α_1,α_2,...,α_s$和$β_1,β_2,...,β_r$可以相互线性表出，则称这两个向量组是等价的，记作:
-    \begin{equation*}
+    $$
         \{α_1,α_2,...,α_s\} \cong \{β_1,β_2,...,β_r\}
-    \end{equation*}
+    $$
 \end{definition}
 % congruent ：全等  一致的的  等价的
 
@@ -636,9 +635,9 @@ $K^n$中的列向量$α_1,α_2,...,α_n$线性无关$\quad \Longleftrightarrow \
 
 \begin{proof}
     不妨设$α_1,α_2,...,α_s$的一个极大线性无关组为$α_1,α_2,...,α_m(m≤s)$
-    \begin{equation*}
+    $$
         α_j=0α_1+...+α_j+...+0α_s,\quad j=1,2,...,m
-    \end{equation*}
+    $$
 
     故而$α_1,α_2,...,α_m$中的所有的元素都可以由$α_1,α_2,...,α_s$线性表出.
 
@@ -658,20 +657,20 @@ $K^n$中的列向量$α_1,α_2,...,α_n$线性无关$\quad \Longleftrightarrow \
 \end{property}
 \begin{proof}
 第三个性质的证明。
-    \begin{equation*}
+    $$
         \begin{aligned}
-            α_i=\sum_{j=1}^{r}a_{ij}β_{j},i=1,2,...,s\\
-            β_j=\sum_{l=1}^{t}b_{jl}γ_{l},j=1,2,...,r\\
+            α_i=\sum_{j=1}^{r}a_{ij}β_{j},\quad i=1,2,...,s\\
+            β_j=\sum_{l=1}^{t}b_{jl}γ_{l},\quad j=1,2,...,r\\
         \end{aligned}
-    \end{equation*}
+    $$
 
     则有
-    \begin{equation*}
+    $$
         \begin{aligned}
             α_i&=\sum_{j=1}^{r}a_{ij}\sum_{l=1}^{t}b_{jl}γ_{l}=\sum_{j=1}^{r}\sum_{l=1}^{t}a_{ij}b_{jl}γ_{l}\\
             &=\sum_{l=1}^{t}\sum_{j=1}^{r}a_{ij}b_{jl}γ_{l}=\sum_{l=1}^{t}γ_{l}[\sum_{j=1}^{r}a_{ij}b_{jl}γ_{l}]
         \end{aligned}
-    \end{equation*}
+    $$
     所以有$α_i$可以由$γ_1,γ_2,...,γ_t$线性表出。
 \end{proof}
 由以上等价关系的对称性和传递性可以得到：
@@ -685,44 +684,44 @@ $K^n$中的列向量$α_1,α_2,...,α_n$线性无关$\quad \Longleftrightarrow \
 
 \begin{proof}
 由已知可以得到
-    \begin{equation*}
+    $$
         \begin{aligned}
             &β_1=a_{11} α_1+...+  a_{s1}α_s\\
             &β_2=a_{12} α_1+...+  a_{s2}α_s\\
             &\vdots\\
             &β_r=a_{1r} α_1+...+  a_{sr}α_s\\
         \end{aligned}
-    \end{equation*}
+    $$
     令
-    \begin{equation*}
+    $$
         x_1β_1+x_2β_2+...+x_rβ_r=0
-    \end{equation*}
+    $$
     则有
-    \begin{equation*}
+    $$
         \begin{aligned}
             &x_1(a_{11} α_1+...+  a_{s1}α_s)\\
             +&x_2(a_{12} α_1+...+  a_{s2}α_s)\\
             &\vdots\\
             +&x_r(a_{1r} α_1+...+  a_{sr}α_s)=0\\
         \end{aligned}
-    \end{equation*}
-    \begin{equation*}
+    $$
+    $$
         \Rightarrow 
         (a_{11}x_1+...+a_{1r}x_r)α_1+...+(a_{s1}x_1+...+a_{sr}x_r)α_s=0
-    \end{equation*}
+    $$
     取向量组$\alpha_1,\alpha_2,...,\alpha_s$中的一个极大线性无关组，不妨设其为$\alpha_1,\alpha_2,...,\alpha_m$,且有$m≤s<r$,则有方程组：
-    \begin{equation*}
+    $$
         \begin{aligned}
             &a_{11} x_1+...+  a_{1r}x_r=0\\
             &a_{21} x_1+...+  a_{2r}x_r=0\\
             &\vdots\\
             &a_{m1} x_1+...+  a_{mr}x_r=0\\
         \end{aligned}
-    \end{equation*}
+    $$
     由$m≤s<r$，方程组由非零解，设非零解为$k_1,k_2,...,k_r$,得到
-    \begin{equation*}
-        k_1\beta_1+k_2\beta_2+...+k_r\beta_r=0
-    \end{equation*}
+    $$
+        k_1β_1+k_2β_2+...+k_rβ_r=0
+    $$
     $k_1,k_2,...,k_r$不全为零，从而$β_1,β_2,...,β_r$线性相关。
 \end{proof}
 
@@ -734,9 +733,9 @@ $K^n$中的列向量$α_1,α_2,...,α_n$线性无关$\quad \Longleftrightarrow \
 
 \begin{corollary}
    等价的线性无关的两个向量组所含有的向量的个数相等。即
-   \begin{equation*}
+   $$
     \{α_1,α_2,...,α_m\} \cong \{γ_1,γ_2,...,γ_s\} \Rightarrow m=s
-   \end{equation*}
+   $$
 \end{corollary}
 
 \begin{proof}
@@ -766,16 +765,16 @@ $\Leftrightarrow \mathrm{rank}\{α_1,α_2,...,α_s\}=s$
 \begin{proof}
     取(\uppercase\expandafter{\romannumeral1})中的极大线性无关组(\uppercase\expandafter{\romannumeral1})',(\uppercase\expandafter{\romannumeral2})中极大线性无关组(\uppercase\expandafter{\romannumeral2})',
 
-    \begin{equation*}
+    $$
         \begin{aligned}
             (\uppercase\expandafter{\romannumeral1})\cong (\uppercase\expandafter{\romannumeral1})'\\
             (\uppercase\expandafter{\romannumeral2}) \cong (\uppercase\expandafter{\romannumeral2})'
         \end{aligned}
-    \end{equation*}
+    $$
     则有
-    \begin{equation*}
+    $$
         (\uppercase\expandafter{\romannumeral1})'\cong (\uppercase\expandafter{\romannumeral1})'\\
-    \end{equation*}
+    $$
     即 (\uppercase\expandafter{\romannumeral1})' 可以由  (\uppercase\expandafter{\romannumeral2})'线性表出.由引理\ref{1}，  (\uppercase\expandafter{\romannumeral1})'所含向量的个数 $\leq$ (\uppercase\expandafter{\romannumeral2})'所含向量的个数。即为
     $\mathrm{rank}(\uppercase\expandafter{\romannumeral1}) \leq \mathrm{rank}(\uppercase\expandafter{\romannumeral2})$
 \end{proof}
@@ -784,8 +783,6 @@ $\Leftrightarrow \mathrm{rank}\{α_1,α_2,...,α_s\}=s$
     \label{4}
 等价的向量组的秩相等。
 \end{corollary}
-
-
 
 
 \subsection{基、维数和坐标}
@@ -826,9 +823,9 @@ $\Leftrightarrow \mathrm{rank}\{α_1,α_2,...,α_s\}=s$
 
 \begin{proof}
     设$V$有一个基$ α_1,α_2,...,α_n$,任取另外一个基$S$,假设$S$所含有的向量个数$k>n$,则$S$中可以取出$β_1,β_2,..,β_{n+1}$,且$β_1,β_2,..,β_{n+1}$可以由$ α_1,α_2,...,α_n$线性表出。由$n+1>n$,据引理\ref{1},$β_1,β_2,..,β_{n+1}$线性相关，这与$S$是一个基矛盾，假设不成立，进一步有$k<=n$
-    \begin{equation*}
-        \{β_1,β_2,..,β_{k}\} \cong \{α_1,α_2,...,α_n\}
-    \end{equation*}
+    $$
+        \{β_1,β_2,..,β_{k}\} \cong \{α_1,α_2,...,α_n\} 
+    $$
     由两个向量组都是线性无关的，从而由推论\ref{4},等价的线性无关向量组含有相同的个数，从而$k=n$
 \end{proof}
 
@@ -842,7 +839,7 @@ $\Leftrightarrow \mathrm{rank}\{α_1,α_2,...,α_s\}=s$
 
 
 \begin{definition}
-    若$V$是有限维的，则将$V$的任何一个基所含有的向量个数称为$V$的维数，记作$\mathrm{dim}_K V$或者$\mathrm{dim} V$；若$V$是无限维的，则将$V$的维数记成$\mathrm{dim} V=∞$；$\{0\}$的维度规定为0.
+    若$V$是有限维的，则将$V$的任何一个基所含有向量个数称为$V$的维数，记作$\mathrm{dim}_K V$或者$\mathrm{dim} V$；若$V$是无限维的，则将$V$的维数记成$\mathrm{dim} V=∞$；$\{0\}$的维度规定为0.
 \end{definition}
 
 \begin{proposition}
@@ -856,9 +853,9 @@ $\Leftrightarrow \mathrm{rank}\{α_1,α_2,...,α_s\}=s$
 
 \begin{definition}
     设$\mathrm{dim} V=n$,取$V$的一个基$α_1,α_2,...,α_n$，则$V$中的任意一个向量可以表示成
-    \begin{equation*}
+    $$
         α=a_1 α_1+a_2  α_2+...+a_n  α_n
-    \end{equation*}
+    $$
     且表示方式唯一。将$(a_1,a_2,...,a_n)$称为$α$在基$α_1,α_2,...,α_n$下的坐标。
 \end{definition}
 
@@ -867,7 +864,7 @@ $\Leftrightarrow \mathrm{rank}\{α_1,α_2,...,α_s\}=s$
 \end{proof}
 
 对于
-\begin{equation*}
+$$
      e_1=\begin{pmatrix} 
             1\\
             0\\
@@ -890,17 +887,17 @@ $\Leftrightarrow \mathrm{rank}\{α_1,α_2,...,α_s\}=s$
             \vdots\\
             1
          \end{pmatrix}
-\end{equation*}
-\begin{equation*}
-    α=\begin{pmatrix} 
+$$
+$$
+    a=a_1e_1+a_2e_2+...+a_3e_3
+    :=\begin{pmatrix} 
         a_1\\
         a_2\\
         a_3\\
         \vdots\\
         a_n
      \end{pmatrix}
-     =a_1e_1+a_2e_2+...+a_3e_3
-\end{equation*}
+$$
 
 $e_1,e_2,...,e_n$为$K_n$的一个基（标准基）。
 
@@ -909,6 +906,46 @@ $e_1,e_2,...,e_n$为$K_n$的一个基（标准基）。
 \end{proposition}
 
 \begin{proof}
-    从$V$中取线性无关的向量组$α_1,α_2,...,α_n$，任取$\beta \in V$,由命题\ref{12},$α_1,α_2,...,α_n,\beta$线性相关，从而$α_1,α_2,...,α_n$是极大线性无关组，$\beta$可以由$α_1,α_2,...,α_n$线性表出。由$\beta$的任意性可以得出，$α_1,α_2,...,α_n$是$V$的一个基。
+    从$V$中取线性无关的向量组$α_1,α_2,...,α_n$，任取$β \in V$,由命题\ref{12},$α_1,α_2,...,α_n,β$线性相关，从而$α_1,α_2,...,α_n$是极大线性无关组，$β$可以由$α_1,α_2,...,α_n$线性表出。由$β$的任意性可以得出，$α_1,α_2,...,α_n$是$V$的一个基。
 \end{proof}
+    
+
+
+\begin{proposition}
+    设$\mathrm{dim} V=n$,若$V$中没一个向量都可以由向量组$α_1,α_2,...,α_n$线性表出，则$α_1,α_2,...,α_n$是$V$的一个基。
+\end{proposition}
+
+\begin{proof}
+    取$V$的一个基$δ_1,δ_2,...,δ_n$,则有$δ_1,δ_2,...,δ_n$可以由$α_1,α_2,...,α_n$线性表出，且$δ_1,δ_2,...,δ_n$，从而有
+    $$
+    \mathrm{rank}(δ_1,δ_2,...,δ_n)≤ \mathrm{rank}(α_1,α_2,...,α_n)
+    $$
+    $$
+    \Rightarrow n=\mathrm{rank}(δ_1,δ_2,...,δ_n)≤ \mathrm{rank}(α_1,α_2,...,α_n) ≤n
+    $$
+    于是有：
+    $$
+     \mathrm{rank}(α_1,α_2,...,α_n) =n
+    $$
+\end{proof}
+
+\begin{proposition}
+    设$\mathrm{dim} V=n$,$V$中任意线性无关的向量组都可以扩充为$V$的一个基。
+\end{proposition}
+
+\begin{proof}
+    设$V$中的向量组$α_1,α_2,...,α_s$线性无关。
+    若$s=n$,则$α_1,α_2,...,α_n$线性无关，由前一命题可知，$α_1,α_2,...,α_s$是$V$的一个基。
+    \\
+    若$s<n$，则$α_1,α_2,...,α_s$不是$V$的一个基，从而$V$中至少由向量$β_1$不能由$α_1,α_2,...,α_s$线性表出，于是$α_1,α_2,...,α_s,β_1$必定线性无关。如果$s+1<n$,则至少还有$\beta_2$不能由$α_1,α_2,...,α_s,β_1,β_2$线性表出。以此类推有$α_1,α_2,...,α_s,β_1,...,β_r$线性无关，且$s+r=n$.$α_1,α_2,...,α_s,β_1,...,β_r$是$V$的一个基。
+\end{proof}
+
+\begin{proposition}
+    设$\mathrm{dim} V=n$,$W$是$V$的一个子空间，则有$\mathrm{dim} W ≤ \mathrm{dim} V$.
+\end{proposition}
+
+\begin{proof}
+    $W$中取一基$α_1,α_2,...,α_m$,可以扩充成$V$中的一个基。
+\end{proof}
+
 \end{document}
