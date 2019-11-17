@@ -83,7 +83,7 @@ $$
 
 特别地,可以写作:
 $$
-|A|:=\sum_{i_1i_2...i_n}(-1)^{\tau(i_1 i_2...i_n)}a_{i_1 1}a_{i_2 2}...a_{i_n n}
+|A|:=\sum_{i_1i_2...i_n}(-1)^{\tau(i_1 i_2...i_n)}a_{i_1 1}a_{i_2 2}...a_{i_n n} 
 $$
 
 由上式可以得出结论：
@@ -345,6 +345,7 @@ $$
             \end{aligned}
         \right)
     \end{equation*}
+    
     另外将
     \begin{equation*}
         (-1)^{i_1+i_2+...+i_k+j_1+j_2+...+j_k}
@@ -357,7 +358,8 @@ $$
     \end{equation*}
     称作代数余子式。可以证明
     \begin{equation*}
-        |A|=(-1)^{i_1+i_2+...+i_k+j_1+j_2+...+j_k}
+        |A|=\sum_{\substack{1 \leq j_1<...<j_k \leq n\\ j_1,...,j_k \in \{1,2,...,n\}}}
+        (-1)^{i_1+i_2+...+i_k+j_1+j_2+...+j_k}
         A\left(
             \begin{aligned}
                 &i_1,i_2,...,i_k\\
@@ -381,11 +383,10 @@ $$
         \\
         &=\sum_{\substack{1 \leq j_1<...<j_k \leq n\\ j_1,...,j_k \in \{1,2,...,n\}}  } \sum_{u_1...u_k} \sum_{v_1...v_{n-k}} (-1)^{i_1+...+i_k-k(k+1)/2}\\
         & \times (-1)^{j_1+...+j_k-k(k+1)/2+\tau(u_1...u_k)+\tau(v_1...v_{n-k})}\\
-        &\times a_{i_1 u_1}a_{i_2u_2}...a_{i_k u_k}a_{i_1'v_1}...a_{i_{n-k}'v_{n-k}}
+        &\times a_{i_1 u_1} a_{i_2u_2}...a_{i_k u_k} a_{i_1' v_1}...a_{i_{n-k}' v_{n-k}}
     \end{aligned}
 \end{equation*}
     
-
     其中，$j_1,...,j_n\in \{1,2,3,...,n\}$。
 
     上式的本质是对$n$元全排列的一个拆解：先从$n$个数中选取$k$个出来，然后放到前$k$个位置，并作$k$元全排列，剩下的$n-k$个元素放到后$n-k$个位置，作$n-k$元全排列。可以证明以上方法得到的集合和$n$元全排列的结果集合相等。论述如下：显然上述方法得到的每一个排列结果都是属于全排列结果之中的某一个；对于每一个$n$元全排列，设其为$m_1m_2...,m_kl_1l_2...l_{n-k}$,按照上述的方法，可以看作是，先从集合$\{1,2,3,...,n\}$中选取$\{m_1,m_2,...,m_k\}$出来，（其中自带大小关系），并且排列成$m_1m_2...,m_k$,剩余的部分排列成$l_1l_2...l_{n-k}$即可，从而两个排序方式所有结果构成的集合存在着一一对应的关系，从而上述方式可以得到$n$元全排列。第二种论述方法：首先上述方法得到的结果是全排列的一种，而上述方法得到的所有结果的总和为：
@@ -420,9 +421,49 @@ $$
         \end{aligned}
     \end{equation*}
 
+    从而有
+    \begin{equation*}
+        \begin{aligned}
+            |A|=&\sum_{\substack{1 \leq j_1<...<j_k \leq n\\ j_1,...,j_k \in \{1,2,...,n\}}}(-1)^{i_1+i_2+...+i_k+j_1+j_2+...+j_k-k(k+1)}\\
+            &\times  \sum_{u_1u_2...u_k}(-1)^{\tau(u_1 u_2...u_k)}a_{i_1 u_1}a_{i_2u_2}...a_{i_k u_k}\\
+            &\times   \sum_{v_1 v_2...v_k}(-1)^{\tau(v_1 v_2...v_{n-k})}a_{i_1'v_1}...a_{i_{n-k},v_{n-k}}\\
+            =&\sum_{\substack{1 \leq j_1<...<j_k \leq n\\ j_1,...,j_k \in \{1,2,...,n\}}}
+            A\left(
+                \begin{aligned}
+                    &i_1,i_2,...,i_k\\
+                    &j_1,j_2,...,j_k
+                \end{aligned}
+            \right)
+            A\left(
+                \begin{aligned}
+                    &i_1',i_2',...,i_{n-k}'\\
+                    &j_1',j_2',...,j_{n-k}'
+                \end{aligned}
+            \right)
+        \end{aligned}
+    \end{equation*}
+
 
 
 \end{proof}
+
+\begin{example}
+    对于行列式$D$,$D$可以经过初等变化变成
+ \begin{equation*}
+    |D|=
+    \begin{vmatrix} 
+       A&0\\
+       B&C\\
+    \end{vmatrix}
+\end{equation*}
+    
+其中$A \in \mathbb{R}^{k\times k}$,$C \in \mathbb{R}^{t\times t}$,从而有
+\begin{equation*}
+    |D|=|A||C|
+\end{equation*}
+
+这个结果与二阶行列式的公式具有形式上的一致性。
+\end{example}
 
 
 
